@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="504" viewBox="0 0 400 504" role="img" aria-labelledby="mentoring-mobile-title mentoring-mobile-desc">
+  <title id="mentoring-mobile-title">Learning together in the Fritsche Lab</title>
+  <desc id="mentoring-mobile-desc">Three ways we learn together in the Fritsche Lab: regular 1:1 conversations about your project, questions and next steps; lab meetings about every two weeks to discuss science and learn from each other; and Slack between meetings to ask questions and share useful resources.</desc>
+  <defs>
+    
+    <g id="individual-conversation" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-36-36H4V-14H-19L-27-7V-14H-36Z" fill="#eaf2f2" stroke="#006f78" stroke-width="2"/>
+      <path d="M12-24H38V-4H30V3L22-4H12Z" fill="#f7f8f6" stroke="#728895" stroke-width="1.8"/>
+      <path d="M-27-27H-5M-27-21H-13M20-15H30" stroke="#006f78" stroke-width="1.8"/>
+      <g stroke="#00274c" stroke-width="2.5">
+        <circle cx="-30" cy="11" r="7"/>
+        <circle cx="30" cy="15" r="7"/>
+        <path d="M-44 36v-5c0-15 28-15 28 0v5M16 40v-5c0-15 28-15 28 0v5"/>
+      </g>
+    </g>
+    
+    <g id="group-discussion" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="-42" y="-38" width="84" height="40" rx="3" fill="#eaf2f8" stroke="#728895" stroke-width="1.8"/>
+      <path d="m-22-25 22 14 22-16M-22-25 22-27" stroke="#346aa0" stroke-width="1.8"/>
+      <g fill="#f7f8f6" stroke="#346aa0" stroke-width="2">
+        <circle cx="-22" cy="-25" r="4"/>
+        <circle cy="-11" r="4"/>
+        <circle cx="22" cy="-27" r="4"/>
+      </g>
+      <g stroke="#00274c" stroke-width="2.5">
+        <circle cx="-32" cy="17" r="6"/>
+        <circle cy="13" r="6"/>
+        <circle cx="32" cy="17" r="6"/>
+        <path d="M-44 39v-4c0-13 24-13 24 0v4M-12 35v-4c0-13 24-13 24 0v4M20 39v-4c0-13 24-13 24 0v4"/>
+      </g>
+    </g>
+    
+    <g id="between-meetings" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-43-34H18V-9H-22L-31-1V-9H-43Z" fill="#f0edf6" stroke="#6c5b9d" stroke-width="2"/>
+      <path d="M-33-24H8M-33-17H-7" stroke="#6c5b9d" stroke-width="1.8"/>
+      <path d="M-9 4H44V29H36V37L26 29H-9Z" fill="#f7f8f6" stroke="#6c5b9d" stroke-width="2"/>
+      <path d="M1 14H34M1 21H22" stroke="#00274c" stroke-width="1.8"/>
+      <path d="M-31 8v13H-17" stroke="#728895" stroke-width="1.8"/>
+    </g>
+  </defs>
+  <rect width="400" height="504" fill="#f7f8f6"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#00274c">
+    <g fill="none" stroke="#ccd5d5">
+      <rect x="24" y="24" width="352" height="142" rx="8"/>
+      <rect x="24" y="181" width="352" height="142" rx="8"/>
+      <rect x="24" y="338" width="352" height="142" rx="8"/>
+    </g>
+    <text x="40" y="58" font-size="23" font-weight="600" letter-spacing="-.4">1:1</text>
+    <text x="40" y="89" font-size="20" fill="#006f78">Regular conversations</text>
+    <text x="40" y="125" font-size="19" fill="#52606d">Your project, questions<tspan x="40" dy="25">and next steps</tspan></text>
+    <use href="#individual-conversation" transform="translate(321 93) scale(.88)"/>
+    <text x="40" y="215" font-size="23" font-weight="600" letter-spacing="-.4">Lab meetings</text>
+    <text x="40" y="246" font-size="20" fill="#346aa0">About every two weeks</text>
+    <text x="40" y="282" font-size="19" fill="#52606d">Discuss science and<tspan x="40" dy="25">learn from each other</tspan></text>
+    <use href="#group-discussion" transform="translate(321 250) scale(.88)"/>
+    <text x="40" y="372" font-size="23" font-weight="600" letter-spacing="-.4">Slack</text>
+    <text x="40" y="403" font-size="20" fill="#6c5b9d">Between meetings</text>
+    <text x="40" y="439" font-size="19" fill="#52606d">Ask questions and<tspan x="40" dy="25">share useful resources</tspan></text>
+    <use href="#between-meetings" transform="translate(321 407) scale(.88)"/>
+  </g>
+</svg>

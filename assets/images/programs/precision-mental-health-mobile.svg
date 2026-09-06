@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600" role="img" aria-labelledby="mental-health-mobile-title mental-health-mobile-desc">
+  <title id="mental-health-mobile-title">Studying mental health treatment response</title>
+  <desc id="mental-health-mobile-desc">Genetic data, clinical context including treatment history, and patient reports are combined to study mental health treatment response over time. Three qualitative trajectories represent illustrative response patterns, not participant data or results. Models are tested in a separate dataset when a suitable dataset is available.</desc>
+  <defs>
+    
+    <g id="genetic-information" transform="translate(-16 -38.4) scale(.8)" fill="none" stroke-linecap="round">
+      <path d="M1.652 4H38.348M12.457 12H27.543M12.457 20H27.543M1.652 28H38.348M1.652 36H38.348M12.457 44H27.543M12.457 52H27.543M1.652 60H38.348M1.652 68H38.348M12.457 76H27.543M12.457 84H27.543M1.652 92H38.348" stroke="#87b3b5" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+      <path d="M0 0C0 5.333 9.528 10.667 20 16C30.472 21.333 40 26.667 40 32C40 37.333 30.472 42.667 20 48C9.528 53.333 0 58.667 0 64C0 69.333 9.528 74.667 20 80C30.472 85.333 40 90.667 40 96" stroke="#006f78" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+      <path d="M40 0C40 5.333 30.472 10.667 20 16C9.528 21.333 0 26.667 0 32C0 37.333 9.528 42.667 20 48C30.472 53.333 40 58.667 40 64C40 69.333 30.472 74.667 20 80C9.528 85.333 0 90.667 0 96" stroke="#00274c" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+    </g>
+    
+    <g id="clinical-information" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-34-34H4L17-21V34H-34Z" fill="#eef1ef" stroke="#728895" stroke-width="1.8"/>
+      <path d="M4-34v13h13" stroke="#728895" stroke-width="1.8"/>
+      <circle cx="-16" cy="-15" r="5" stroke="#00274c" stroke-width="2"/>
+      <path d="M-25 0c0-10 18-10 18 0M-24 12H5M-24 22H-8" stroke="#00274c" stroke-width="2"/>
+      <g transform="translate(24 14) rotate(35)">
+        <rect x="-10" y="-22" width="20" height="44" rx="10" fill="#f7f8f6" stroke="#006f78" stroke-width="2.5"/>
+        <path d="M-10 0H10" stroke="#006f78" stroke-width="2"/>
+      </g>
+    </g>
+    
+    <g id="patient-information" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-40-28H40V22H-17L-31 34V22H-40Z" fill="#eef1ef" stroke="#728895" stroke-width="1.8"/>
+      <path d="M-27-14H23M-27-6H7" stroke="#00274c" stroke-width="2"/>
+      <g stroke="#006f78" stroke-width="2">
+        <circle cx="-24" cy="9" r="4"/>
+        <circle cy="9" r="4" fill="#006f78"/>
+        <circle cx="24" cy="9" r="4"/>
+      </g>
+    </g>
+  </defs>
+  <rect width="400" height="600" fill="#f7f8f6"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#00274c">
+    <text x="24" y="44" font-size="28" font-weight="600" letter-spacing="-.5">Study treatment<tspan x="24" dy="32">response</tspan></text>
+    <g fill="none" stroke="#ccd5d5">
+      <rect x="24" y="109" width="352" height="74" rx="8"/>
+      <rect x="24" y="193" width="352" height="74" rx="8"/>
+      <rect x="24" y="277" width="352" height="74" rx="8"/>
+    </g>
+    <text x="40" y="139" font-size="23" font-weight="600" letter-spacing="-.4">Genetic data</text>
+    <text x="40" y="167" font-size="19" fill="#52606d">Inherited variation</text>
+    <use href="#genetic-information" transform="translate(331 146) scale(.77)"/>
+    <text x="40" y="223" font-size="23" font-weight="600" letter-spacing="-.4">Clinical context</text>
+    <text x="40" y="251" font-size="19" fill="#52606d">Treatment and history</text>
+    <use href="#clinical-information" transform="translate(331 230) scale(.77)"/>
+    <text x="40" y="307" font-size="23" font-weight="600" letter-spacing="-.4">Patient reports</text>
+    <text x="40" y="335" font-size="19" fill="#52606d">Symptoms over time</text>
+    <use href="#patient-information" transform="translate(331 314) scale(.77)"/>
+    <rect x="24" y="373" width="352" height="117" rx="8" fill="#eaf2f2" stroke="#bdd4d5"/>
+    <text x="40" y="402" font-size="23" font-weight="600" letter-spacing="-.4">Response over time</text>
+    <path d="M40 414v42M146 414v42M252 414v42M360 414v42" fill="none" stroke="#ccd5d5" stroke-width="1"/>
+    <g fill="none" stroke-width="2.5" stroke-linecap="round">
+      <path d="M40 418C76 418 110 430 146 430S216 417 252 417 324 427 360 427" stroke="#006f78"/>
+      <path d="M40 435C76 435 110 436 146 436S216 433 252 433 324 451 360 451" stroke="#00274c"/>
+      <path d="M40 454C76 454 110 444 146 444S216 453 252 453 324 440 360 440" stroke="#718a97"/>
+    </g>
+    <g fill="#eaf2f2" stroke-width="2">
+      <g stroke="#006f78"><circle cx="40" cy="418" r="3"/><circle cx="146" cy="430" r="3"/><circle cx="252" cy="417" r="3"/><circle cx="360" cy="427" r="3"/></g>
+      <g stroke="#00274c"><circle cx="40" cy="435" r="3"/><circle cx="146" cy="436" r="3"/><circle cx="252" cy="433" r="3"/><circle cx="360" cy="451" r="3"/></g>
+      <g stroke="#718a97"><circle cx="40" cy="454" r="3"/><circle cx="146" cy="444" r="3"/><circle cx="252" cy="453" r="3"/><circle cx="360" cy="440" r="3"/></g>
+    </g>
+    <text x="40" y="479" font-size="19" fill="#52606d">Illustrative patterns</text>
+    <text x="24" y="527" font-size="24" font-weight="600" letter-spacing="-.4">Test in a separate dataset</text>
+    <text x="24" y="556" font-size="19" fill="#52606d">When a suitable dataset<tspan x="24" dy="25">is available</tspan></text>
+  </g>
+</svg>

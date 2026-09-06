@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600" role="img" aria-labelledby="prs-mobile-title prs-mobile-desc">
+  <title id="prs-mobile-title">One published polygenic score evaluated across three cohorts</title>
+  <desc id="prs-mobile-desc">Three equal cards show the Michigan Genomics Initiative (MGI), UK Biobank, and NIH All of Us Research Program. Each repeats the identical weighted-score schematic to indicate that the published variants and weights stay fixed. Below, a reference diagonal represents calibration, overlapping distributions represent discrimination, and a score connected to phenotype nodes represents association testing. These conceptual illustrations explain different evaluation questions; they do not show study results.</desc>
+  <defs>
+    
+    <g id="prs-fixed-score" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-76 10H26" fill="none" stroke="#ccd5d5" stroke-width="1.5"/>
+      <path d="M-66 10V-10M-46 10V-26M-26 10V26M-6 10V-18M14 10V-2" fill="none" stroke="#006f78" stroke-width="2.5"/>
+      <g fill="#eaf2f2" stroke="#006f78" stroke-width="2">
+        <circle cx="-66" cy="-10" r="3.5"/><circle cx="-46" cy="-26" r="3.5"/>
+        <circle cx="-26" cy="26" r="3.5"/><circle cx="-6" cy="-18" r="3.5"/><circle cx="14" cy="-2" r="3.5"/>
+      </g>
+      <path d="M35 10H45m-5-4 5 4-5 4" fill="none" stroke="#728895" stroke-width="1.5"/>
+      <rect x="53" y="-9" width="35" height="38" rx="5" fill="#eaf2f2" stroke="#bdd4d5"/>
+      <path d="M79 0H62l9 10-9 10h17" fill="none" stroke="#00274c" stroke-width="2"/>
+    </g>
+    
+    <g id="prs-calibration" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-37-24V25H38" stroke="#728895" stroke-width="1.5"/>
+      <path d="M-30 19 29-20" stroke="#006f78" stroke-width="2.5" stroke-dasharray="5 5"/>
+    </g>
+    
+    <g id="prs-discrimination" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-45 25H45" stroke="#ccd5d5" stroke-width="1.5"/>
+      <path d="M-43 24C-33 24-33-21-16-21S0 24 25 24" stroke="#00274c" stroke-width="2.5"/>
+      <path d="M-25 24C0 24 0-21 16-21S33 24 43 24" stroke="#006f78" stroke-width="2.5"/>
+    </g>
+    
+    <g id="prs-associations" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-24 0H-7M-7-22v44m0-44H26M-7 0H26M-7 22H26" fill="none" stroke="#728895" stroke-width="1.5"/>
+      <rect x="-45" y="-13" width="26" height="26" rx="4" fill="#eaf2f2" stroke="#006f78" stroke-width="2"/>
+      <path d="M-25-6h-12l6 6-6 6h12" fill="none" stroke="#00274c" stroke-width="1.8"/>
+      <g fill="#f7f8f6" stroke="#006f78" stroke-width="2">
+        <circle cx="32" cy="-22" r="6"/><circle cx="32" r="6"/><circle cx="32" cy="22" r="6"/>
+      </g>
+    </g>
+  </defs>
+  <rect width="400" height="600" fill="#f7f8f6"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#00274c">
+    <text x="24" y="44" font-size="28" font-weight="600" letter-spacing="-.5">One score, three cohorts</text>
+    <text x="24" y="75" font-size="19" fill="#52606d">Same published variants and weights</text>
+    <g fill="none" stroke="#ccd5d5">
+      <rect x="24" y="106" width="352" height="64" rx="8"/>
+      <rect x="24" y="182" width="352" height="64" rx="8"/>
+      <rect x="24" y="258" width="352" height="64" rx="8"/>
+    </g>
+    <g font-size="23" font-weight="600" letter-spacing="-.4">
+      <text x="40" y="146">MGI</text>
+      <text x="40" y="222">UK Biobank</text>
+      <text x="40" y="298">All of Us</text>
+    </g>
+    <use href="#prs-fixed-score" transform="translate(287 138) scale(.8)"/>
+    <use href="#prs-fixed-score" transform="translate(287 214) scale(.8)"/>
+    <use href="#prs-fixed-score" transform="translate(287 290) scale(.8)"/>
+    <text x="24" y="366" font-size="24" font-weight="600" letter-spacing="-.4">Three evaluation questions</text>
+    <use href="#prs-calibration" transform="translate(66 407) scale(.85)"/>
+    <text x="128" y="407" font-size="23" font-weight="600" letter-spacing="-.4">Calibration</text>
+    <text x="128" y="433" font-size="19" fill="#52606d">Predicted vs observed</text>
+    <use href="#prs-discrimination" transform="translate(66 478) scale(.85)"/>
+    <text x="128" y="478" font-size="23" font-weight="600" letter-spacing="-.4">Discrimination</text>
+    <text x="128" y="504" font-size="19" fill="#52606d">Outcome separation</text>
+    <use href="#prs-associations" transform="translate(66 549) scale(.85)"/>
+    <text x="128" y="549" font-size="23" font-weight="600" letter-spacing="-.4">Associations</text>
+    <text x="128" y="575" font-size="19" fill="#52606d">Score vs phenotypes</text>
+  </g>
+</svg>

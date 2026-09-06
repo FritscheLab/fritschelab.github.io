@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fritschelab.org/sitemap.xml

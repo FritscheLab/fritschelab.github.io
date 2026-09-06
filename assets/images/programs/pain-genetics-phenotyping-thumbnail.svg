@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200" role="img" aria-labelledby="pain-preview-title pain-preview-desc">
+  <title id="pain-preview-title">Three pain mechanisms that can coexist</title>
+  <desc id="pain-preview-desc">Tissue injury with sensory endings, a locally disrupted myelinated axon, and an altered processing circuit illustrate nociceptive, neuropathic, and nociplastic mechanisms. These mechanisms can coexist; the panels do not indicate progression. Conceptual preview.</desc>
+  <defs>
+    
+    <g id="tissue-schematic" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-66-22H-13L-3-13 6-25 15-22H66V28H-66Z" fill="#eef1ef" stroke="#ccd5d5" stroke-width="1.875" />
+      <path d="M-66-22H-13L-3-13 6-25 15-22H66" fill="none" stroke="#9c4f2f" stroke-width="3.125" />
+      <path d="M-57 0h17M39 0h18M-57 15h17M39 15h18" stroke="#ccd5d5" stroke-width="1.875" />
+      <path d="M0 38V12M0 18-26 2V-7M-26 2-39-7M0 9 22-3v-7M22-3 34-9M0 12V-3" fill="none" stroke="#00274c" stroke-width="3.125" />
+      <g fill="#9c4f2f">
+        <circle cx="-26" cy="-7" r="3" /><circle cx="-39" cy="-7" r="3" />
+        <circle cx="22" cy="-10" r="3" /><circle cx="34" cy="-9" r="3" /><circle cy="-3" r="3" />
+      </g>
+    </g>
+
+    <g id="axon-schematic" stroke-linecap="round" stroke-linejoin="round">
+      <g fill="#edf0f1" stroke="#728895" stroke-width="2.25">
+        <rect x="-61" y="-12" width="20" height="24" rx="9" />
+        <rect x="-33" y="-12" width="20" height="24" rx="9" />
+        <rect x="17" y="-12" width="20" height="24" rx="9" />
+        <rect x="45" y="-12" width="20" height="24" rx="9" />
+      </g>
+      <path d="M-70 0H-12M16 0h55" fill="none" stroke="#00274c" stroke-width="3.125" />
+      <path d="m-12 0 7-4 5 7 6-5 10 2M-7-14l7 3 8-5M-6 16l7-4 8 3" fill="none" stroke="#9c4f2f" stroke-width="3.125" />
+    </g>
+
+    <g id="processing-schematic" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-73 0h7l4-7 5 14 5-7h11M40 0h8l6-23 7 46 6-23h7" stroke="#9c4f2f" stroke-width="3.125" />
+      <path d="M-38 0h10l9-10M19-10l9 10h9M-15-13 15-13 0 15ZM-15-18v-4C-15-39 15-39 15-22v4m-4-4 4 4 4-4" stroke="#728895" stroke-width="2.25" />
+      <circle cx="-15" cy="-13" r="5" fill="#f1e8e2" stroke="#00274c" stroke-width="2.5" />
+      <circle cx="15" cy="-13" r="5" fill="#f1e8e2" stroke="#00274c" stroke-width="2.5" />
+      <circle cy="15" r="5" fill="#f1e8e2" stroke="#00274c" stroke-width="2.5" />
+    </g>
+    </defs>
+  <rect width="400" height="200" fill="#f7f8f6"/>
+  <g fill="none" stroke="#ccd5d5" stroke-width="1.5">
+    <rect x="16" y="32" width="112" height="136" rx="8"/>
+    <rect x="144" y="32" width="112" height="136" rx="8"/>
+  </g>
+  <rect x="272" y="32" width="112" height="136" rx="8" fill="#f1e8e2" stroke="#d5b3a3" stroke-width="1.5"/>
+  <use href="#tissue-schematic" transform="translate(72 98) scale(.7)"/>
+  <use href="#axon-schematic" transform="translate(200 100) scale(.7)"/>
+  <use href="#processing-schematic" transform="translate(328 104) scale(.7)"/>
+</svg>

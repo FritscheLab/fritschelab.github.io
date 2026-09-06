@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">FL squared — Fritsche Lab</title>
+  <desc id="desc">A white F and maize L lean inward to suggest a secondary trapezoidal A, with a maize superscript two.</desc>
+  <defs>
+    <clipPath id="l-below-f-top" clipPathUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="1000" height="588"/>
+    </clipPath>
+  </defs>
+  <rect width="96" height="96" rx="22" fill="#00274C"/>
+  <path fill="#FFFFFF" transform="matrix(.073 0 .010219 -.073 14.129 74.875)" d="M79 0V685H504V588H190V357H451V260H190V0Z"/>
+  <path fill="#FFCB05" clip-path="url(#l-below-f-top)" transform="matrix(.073 0 -.010219 -.073 46.586 74.875)" d="M463 0H79V685H190V99H463Z"/>
+  <path fill="#FFCB05" transform="translate(68.608 36.355) scale(.0335 -.0335)" d="M492 0H67V95L230 263Q304 339 334 382T364 476.5Q364 528 335 550T240 572Q178 572 103 558L78 554 71 642Q168 671 272 671Q479 671 479 487Q479 415 447.5 362T335 234L194 97H492Z"/>
+</svg>

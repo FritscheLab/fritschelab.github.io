@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    
+
+
+
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Fritsche Lab SLURM Playbook | Fritsche Lab</title>
+<meta name="description" content="A tested guide to CPU jobs and job arrays on University of Michigan SLURM clusters.">
+<link rel="canonical" href="https://fritschelab.org/tools/slurm-playbook/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fritsche Lab">
+<meta property="og:title" content="Fritsche Lab SLURM Playbook | Fritsche Lab">
+<meta property="og:description" content="A tested guide to CPU jobs and job arrays on University of Michigan SLURM clusters.">
+<meta property="og:url" content="https://fritschelab.org/tools/slurm-playbook/">
+<meta property="og:image" content="https://fritschelab.org/assets/images/fritsche-lab-social.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fritsche Lab SLURM Playbook | Fritsche Lab">
+<meta name="twitter:description" content="A tested guide to CPU jobs and job arrays on University of Michigan SLURM clusters.">
+<meta name="twitter:image" content="https://fritschelab.org/assets/images/fritsche-lab-social.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/images/fritsche-lab-favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/atom+xml" title="Fritsche Lab updates" href="/feed.xml">
+<script src="/assets/js/theme.js"></script>
+<link rel="stylesheet" href="/assets/css/site.css?v=1788708613">
+
+<script type="application/ld+json">{  "@context": "https://schema.org",    "@type": "LearningResource",  "name": "Fritsche Lab SLURM Playbook",  "description": "A tested guide to CPU jobs and job arrays on University of Michigan SLURM clusters.",  "url": "https://fritschelab.org/tools/slurm-playbook/",  "license": "https://github.com/FritscheLab/slurm-playbook/blob/main/LICENSE"  }</script>
+
+
+  </head>
+  <body class="page-resource">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" data-site-header>
+  <div class="header-shell">
+    <div class="site-brand-note" data-logo-note>
+      <a class="site-brand" href="/" aria-label="Fritsche Lab home" aria-describedby="logo-note">
+        <img class="site-brand__light" src="/assets/images/fritsche-lab-logo.svg" alt="Fritsche Lab" width="340" height="96">
+        <img class="site-brand__dark" src="/assets/images/fritsche-lab-logo-dark.svg" alt="Fritsche Lab" width="340" height="96">
+      </a>
+      <div class="logo-note" id="logo-note" role="tooltip" hidden>
+        <p><strong>F</strong> for Fritsche. <strong>L</strong> for Lars. Another <strong>L</strong> for Lab. That gives us <strong>FL²</strong>.</p>
+        <p>The F and L lean together to suggest an <strong>A</strong>: <strong>A² for Ann Arbor</strong>.</p>
+        <p>We thought it spoke for itself. This tooltip suggests otherwise.</p>
+      </div>
+    </div>
+    <button class="theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false" title="Switch to dark theme" data-theme-toggle hidden>
+      <svg class="theme-toggle__moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
+      <svg class="theme-toggle__sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <span data-theme-label>Theme</span>
+    </button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+      <span class="nav-toggle__label">Menu</span>
+      <span class="nav-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <nav id="primary-navigation" class="primary-nav" aria-label="Primary" data-primary-nav>
+      <ul>
+        <li class="nav-with-submenu">
+          <a href="/research/">Research</a>
+          <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="research-submenu" aria-label="Show research programs" data-submenu-toggle><span aria-hidden="true">⌄</span></button>
+          <ul class="submenu" id="research-submenu">
+            
+            <li><a href="/research/polygenic-risk/">Polygenic Risk</a></li><li><a href="/research/ehr-linked-biobanks/">EHR-Linked Biobanks</a></li><li><a href="/research/precision-mental-health/">Precision Mental Health</a></li><li><a href="/research/pain-genetics-phenotyping/">Nociplastic Pain</a></li>
+          </ul>
+        </li>
+        <li><a href="/people/">People</a></li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a href="/tools/" aria-current="page">Tools &amp; Data</a></li>
+        <li><a href="/news/">News</a></li>
+        <li><a class="nav-cta" href="/collaborate/">Collaborate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <main id="main-content" class="site-main" tabindex="-1">
+      
+<article class="detail-page detail-page--resource accent-maize">
+  <div class="content-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol><li><a href="/tools/">Tools &amp; Data</a></li><li aria-current="page">Fritsche Lab SLURM Playbook</li></ol>
+    </nav>
+    <header class="detail-hero resource-hero">
+      <div class="detail-hero__copy">
+        <div class="eyebrow-row">
+          <p class="eyebrow">Research computing guide</p>
+          
+<span class="status-badge status-badge--supported">Supported</span>
+
+        </div>
+        <h1>Fritsche Lab SLURM Playbook</h1>
+        <p class="page-lede">The SLURM Playbook covers submitting and monitoring CPU jobs and job arrays on U-M clusters, diagnosing failures, and rerunning only failed tasks.</p>
+        
+          <div class="button-row">
+            <a class="button button--primary" href="https://fritschelab.org/slurm-playbook/">Open the SLURM Playbook</a>
+            
+          </div>
+        
+      </div>
+      
+    </header>
+
+    
+
+
+<dl class="metadata-grid">
+  <div><dt>Audience</dt><dd>Researchers comfortable with a Unix shell, Analysts beginning to use SLURM, Research teams building repeatable CPU workflows</dd></div>
+  <div><dt>Status</dt><dd>Supported</dd></div>
+  <div><dt>Last reviewed</dt><dd><time datetime="2026-09-02">September 2, 2026</time></dd></div>
+  <div><dt>Maintainer</dt><dd>Fritsche Lab</dd></div>
+  <div><dt>License</dt><dd><a href="https://github.com/FritscheLab/slurm-playbook/blob/main/LICENSE">MIT</a></dd></div>
+  <div><dt>Citation</dt><dd><a href="https://github.com/FritscheLab/slurm-playbook" target="_blank" rel="noopener noreferrer">Fritsche Lab SLURM Playbook repository</a></dd></div>
+  <div><dt>Support</dt><dd><a href="https://github.com/FritscheLab/slurm-playbook/issues/new">GitHub issues</a></dd></div>
+</dl>
+
+
+    
+
+    <div class="detail-body prose">
+      <p>Each example starts with a command tested locally before submission to the cluster. The examples are short, easy to copy, and use synthetic data.</p>
+
+<h2 id="the-playbook-covers">The playbook covers</h2>
+
+<ul>
+  <li>Submitting serial or threaded CPU jobs.</li>
+  <li>Choosing realistic time, memory, and CPU requests.</li>
+  <li>Splitting independent work across a job array.</li>
+  <li>Diagnosing failed tasks from job logs and accounting records.</li>
+  <li>Rerunning only failed tasks.</li>
+</ul>
+
+<p>The worked example uses 24 deterministic synthetic tasks to demonstrate how to distribute work and combine the outputs. It has been tested on Great Lakes. The examples can also be adapted for Armis2, although each project must follow the policies and data restrictions of the cluster it uses.</p>
+
+<h2 id="scope">Scope</h2>
+
+<p>The guide assumes basic familiarity with a Unix shell. It covers CPU programs, single-node process pools, job arrays, one dependency stage, monitoring, and rerunning failed tasks. MPI, multi-node jobs, GPUs, and cluster administration are outside its scope. Project teams remain responsible for confirming which data and workflows are approved.</p>
+
+<h2 id="data-and-security">Data and security</h2>
+
+<p>Begin with the synthetic example and confirm current guidance from U-M ARC before scaling up. When asking for help in a public issue, share only a non-sensitive excerpt. Never include protected health information (PHI), restricted research data, credentials, account names, private cluster paths, or private results.</p>
+
+<p>The playbook is available under the MIT License. Questions and corrections are welcome through its <a href="https://github.com/FritscheLab/slurm-playbook/issues/new">GitHub issue tracker</a>.</p>
+
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<aside class="context-cta">
+  <div><p class="eyebrow">Resource questions</p><h2>Questions about a resource?</h2><p>Email us about its methods or report a problem, including the steps needed to reproduce it. Please do not send protected health information or restricted research data.</p></div>
+  <a class="button button--primary" href="mailto:larsf+lab@umich.edu?subject=Fritsche%20Lab%20resource%20question">Email the lab</a>
+</aside>
+
+
+  </div>
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div class="footer-shell">
+    <div class="footer-brand">
+      <img src="/assets/images/fritsche-lab-mark.svg" alt="" width="54" height="54">
+      <div><strong>Fritsche Lab</strong><span>University of Michigan</span></div>
+    </div>
+    <div>
+      <h2>Affiliations</h2>
+      <p>Michigan Medicine<br>Department of Anesthesiology<br>Department of Biostatistics</p>
+    </div>
+    <div>
+      <h2>Connect</h2>
+      <ul>
+        <li><a href="mailto:larsf+lab@umich.edu">larsf+lab@umich.edu</a></li>
+        <li><a href="https://github.com/FritscheLab">Fritsche Lab on GitHub</a></li>
+        <li><a href="https://medschool.umich.edu/profile/4980/lars-fritsche">Lars Fritsche’s U-M profile</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Visit</h2>
+      <address>Lobby M, Suite 3100, Office 3M 2150<br>24 Frank Lloyd Wright Dr<br>Ann Arbor, MI 48105-9484</address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Fritsche Lab · <a href="/accessibility/">Accessibility</a> · <a href="/privacy/">Privacy</a></p>
+  </div>
+</footer>
+
+    <script src="/assets/js/site.js?v=1788708613" defer></script>
+  </body>
+</html>

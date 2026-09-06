@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200" role="img" aria-labelledby="ehr-preview-title ehr-preview-desc">
+  <title id="ehr-preview-title">Genomic data linked to clinical history</title>
+  <desc id="ehr-preview-desc">A DNA helix connects neutrally to records and a prescription along follow-up time, representing genomic data linked to longitudinal health records. The connection indicates linkage, not causation. Conceptual preview, not participant data.</desc>
+  <defs>
+    
+    <g id="ehr-genome" fill="none" stroke-linecap="round">
+      <path d="M1.652 4H38.348M12.457 12H27.543M12.457 20H27.543M1.652 28H38.348M1.652 36H38.348M12.457 44H27.543M12.457 52H27.543M1.652 60H38.348M1.652 68H38.348M12.457 76H27.543M12.457 84H27.543M1.652 92H38.348" stroke="#92aec4" stroke-width="1.875" />
+      <path d="M0 0C0 5.333 9.528 10.667 20 16C30.472 21.333 40 26.667 40 32C40 37.333 30.472 42.667 20 48C9.528 53.333 0 58.667 0 64C0 69.333 9.528 74.667 20 80C30.472 85.333 40 90.667 40 96" stroke="#346aa0" stroke-width="3.125" />
+      <path d="M40 0C40 5.333 30.472 10.667 20 16C9.528 21.333 0 26.667 0 32C0 37.333 9.528 42.667 20 48C30.472 53.333 40 58.667 40 64C40 69.333 30.472 74.667 20 80C9.528 85.333 0 90.667 0 96" stroke="#00274c" stroke-width="3.125" />
+    </g>
+
+    <g id="ehr-care-history" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-104 30H104m-7-5 7 5-7 5" stroke="#728895" stroke-width="1.875" />
+      <path d="M-76 9V30M-4 7V30M73 9V30" stroke="#92aec4" stroke-width="1.875" />
+      <path d="M-93-36h23l12 12V8h-35ZM-70-36v12h12M56-36h23l12 12V8H56ZM79-36v12h12" stroke="#00274c" stroke-width="2.5" />
+      <path d="M-84-15h17M-84-6h17M65-15h17M65-6h17" stroke="#346aa0" stroke-width="2.5" />
+      <g transform="translate(-4 -13) rotate(-40)">
+        <rect x="-22" y="-10" width="44" height="20" rx="10" stroke="#346aa0" stroke-width="3.125" />
+        <path d="M0-10V10" stroke="#346aa0" stroke-width="2.5" />
+      </g>
+      <g fill="#eaf2f8" stroke="#346aa0" stroke-width="2.5">
+        <circle cx="-76" cy="30" r="4" /><circle cx="-4" cy="30" r="4" /><circle cx="73" cy="30" r="4" />
+      </g>
+    </g>
+    </defs>
+  <rect width="400" height="200" fill="#f7f8f6"/>
+  <rect x="16" y="32" width="112" height="136" rx="8" fill="none" stroke="#ccd5d5" stroke-width="1.5"/>
+  <rect x="152" y="32" width="232" height="136" rx="8" fill="#eaf2f8" stroke="#bdd0e0" stroke-width="1.5"/>
+  <use href="#ehr-genome" transform="translate(52 52)"/>
+  <use href="#ehr-care-history" transform="translate(268 100) scale(.92)"/>
+  <path d="M128 100H152" fill="none" stroke="#728895" stroke-width="2"/>
+  <circle cx="140" cy="100" r="4" fill="#f7f8f6" stroke="#346aa0" stroke-width="2.5"/>
+</svg>

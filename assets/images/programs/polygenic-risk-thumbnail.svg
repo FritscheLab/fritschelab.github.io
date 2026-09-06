@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200" role="img" aria-labelledby="prs-preview-title prs-preview-desc">
+  <title id="prs-preview-title">The same polygenic score in the Michigan Genomics Initiative, UK Biobank, and NIH All of Us Research Program</title>
+  <desc id="prs-preview-desc">Three equal panels labeled MGI (Michigan Genomics Initiative), UKB (UK Biobank), and AoU (NIH All of Us Research Program) repeat exactly the same weighted genetic score. The variants and weights stay fixed when a published score is evaluated across cohorts. Conceptual preview, not measured results.</desc>
+  <defs>
+    
+    <g id="prs-fixed-score" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-76 10H26" fill="none" stroke="#ccd5d5" stroke-width="1.875" />
+      <path d="M-66 10V-10M-46 10V-26M-26 10V26M-6 10V-18M14 10V-2" fill="none" stroke="#006f78" stroke-width="3.125" />
+      <g fill="#eaf2f2" stroke="#006f78" stroke-width="2.5">
+        <circle cx="-66" cy="-10" r="3.5" /><circle cx="-46" cy="-26" r="3.5" />
+        <circle cx="-26" cy="26" r="3.5" /><circle cx="-6" cy="-18" r="3.5" /><circle cx="14" cy="-2" r="3.5" />
+      </g>
+      <path d="M35 10H45m-5-4 5 4-5 4" fill="none" stroke="#728895" stroke-width="1.875" />
+      <rect x="53" y="-9" width="35" height="38" rx="5" fill="#eaf2f2" stroke="#bdd4d5" />
+      <path d="M79 0H62l9 10-9 10h17" fill="none" stroke="#00274c" stroke-width="2.5" />
+    </g>
+
+      </defs>
+  <rect width="400" height="200" fill="#f7f8f6"/>
+  <g fill="none" stroke="#ccd5d5" stroke-width="1.5">
+    <rect x="16" y="32" width="112" height="136" rx="8"/>
+    <rect x="144" y="32" width="112" height="136" rx="8"/>
+    <rect x="272" y="32" width="112" height="136" rx="8"/>
+  </g>
+  <use href="#prs-fixed-score" transform="translate(68.28 78) scale(.62)"/>
+  <use href="#prs-fixed-score" transform="translate(196.28 78) scale(.62)"/>
+  <use href="#prs-fixed-score" transform="translate(324.28 78) scale(.62)"/>
+  <g font-family="Inter, Arial, sans-serif" font-size="30" font-weight="600" text-anchor="middle" fill="#00274c">
+    <text x="72" y="143">MGI</text>
+    <text x="200" y="143">UKB</text>
+    <text x="328" y="143">AoU</text>
+  </g>
+</svg>
