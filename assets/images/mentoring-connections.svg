@@ -1,13 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="376" viewBox="0 0 720 376" role="img" aria-labelledby="mentoring-title mentoring-desc">
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="720" height="376" viewBox="0 0 720 376" role="img" aria-labelledby="mentoring-title mentoring-desc">
   <title id="mentoring-title">Learning together in the Fritsche Lab</title>
   <desc id="mentoring-desc">Three ways we learn together in the Fritsche Lab: regular 1:1 conversations about your project, questions and next steps; lab meetings about every two weeks to discuss science and learn from each other; and Slack between meetings to ask questions and share useful resources.</desc>
+  <style>
+    :root:target {
+      --figure-blue: #85b8e6;
+      --figure-blue-soft: #1b3248;
+      --figure-border: #344b60;
+      --figure-canvas: #142536;
+      --figure-ink: #e8f1fa;
+      --figure-line: #8ba3b8;
+      --figure-muted: #a7b8c8;
+      --figure-purple: #bca7e8;
+      --figure-purple-soft: #342a4b;
+      --figure-teal: #6dcac3;
+      --figure-teal-soft: #163d41;
+    }
+  </style>
   <defs>
     
     <g id="individual-conversation" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M-36-36H4V-14H-19L-27-7V-14H-36Z" fill="#eaf2f2" stroke="#006f78" stroke-width="2"/>
-      <path d="M12-24H38V-4H30V3L22-4H12Z" fill="#f7f8f6" stroke="#728895" stroke-width="1.8"/>
-      <path d="M-27-27H-5M-27-21H-13M20-15H30" stroke="#006f78" stroke-width="1.8"/>
-      <g stroke="#00274c" stroke-width="2.5">
+      <path d="M-36-36H4V-14H-19L-27-7V-14H-36Z" fill="var(--figure-teal-soft, #eaf2f2)" stroke="var(--figure-teal, #006f78)" stroke-width="2"/>
+      <path d="M12-24H38V-4H30V3L22-4H12Z" fill="var(--figure-canvas, #f7f8f6)" stroke="var(--figure-line, #728895)" stroke-width="1.8"/>
+      <path d="M-27-27H-5M-27-21H-13M20-15H30" stroke="var(--figure-teal, #006f78)" stroke-width="1.8"/>
+      <g stroke="var(--figure-ink, #00274c)" stroke-width="2.5">
         <circle cx="-30" cy="11" r="7"/>
         <circle cx="30" cy="15" r="7"/>
         <path d="M-44 36v-5c0-15 28-15 28 0v5M16 40v-5c0-15 28-15 28 0v5"/>
@@ -15,14 +30,14 @@
     </g>
     
     <g id="group-discussion" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="-42" y="-38" width="84" height="40" rx="3" fill="#eaf2f8" stroke="#728895" stroke-width="1.8"/>
-      <path d="m-22-25 22 14 22-16M-22-25 22-27" stroke="#346aa0" stroke-width="1.8"/>
-      <g fill="#f7f8f6" stroke="#346aa0" stroke-width="2">
+      <rect x="-42" y="-38" width="84" height="40" rx="3" fill="var(--figure-blue-soft, #eaf2f8)" stroke="var(--figure-line, #728895)" stroke-width="1.8"/>
+      <path d="m-22-25 22 14 22-16M-22-25 22-27" stroke="var(--figure-blue, #346aa0)" stroke-width="1.8"/>
+      <g fill="var(--figure-canvas, #f7f8f6)" stroke="var(--figure-blue, #346aa0)" stroke-width="2">
         <circle cx="-22" cy="-25" r="4"/>
         <circle cy="-11" r="4"/>
         <circle cx="22" cy="-27" r="4"/>
       </g>
-      <g stroke="#00274c" stroke-width="2.5">
+      <g stroke="var(--figure-ink, #00274c)" stroke-width="2.5">
         <circle cx="-32" cy="17" r="6"/>
         <circle cy="13" r="6"/>
         <circle cx="32" cy="17" r="6"/>
@@ -31,16 +46,16 @@
     </g>
     
     <g id="between-meetings" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M-43-34H18V-9H-22L-31-1V-9H-43Z" fill="#f0edf6" stroke="#6c5b9d" stroke-width="2"/>
-      <path d="M-33-24H8M-33-17H-7" stroke="#6c5b9d" stroke-width="1.8"/>
-      <path d="M-9 4H44V29H36V37L26 29H-9Z" fill="#f7f8f6" stroke="#6c5b9d" stroke-width="2"/>
-      <path d="M1 14H34M1 21H22" stroke="#00274c" stroke-width="1.8"/>
-      <path d="M-31 8v13H-17" stroke="#728895" stroke-width="1.8"/>
+      <path d="M-43-34H18V-9H-22L-31-1V-9H-43Z" fill="var(--figure-purple-soft, #f0edf6)" stroke="var(--figure-purple, #6c5b9d)" stroke-width="2"/>
+      <path d="M-33-24H8M-33-17H-7" stroke="var(--figure-purple, #6c5b9d)" stroke-width="1.8"/>
+      <path d="M-9 4H44V29H36V37L26 29H-9Z" fill="var(--figure-canvas, #f7f8f6)" stroke="var(--figure-purple, #6c5b9d)" stroke-width="2"/>
+      <path d="M1 14H34M1 21H22" stroke="var(--figure-ink, #00274c)" stroke-width="1.8"/>
+      <path d="M-31 8v13H-17" stroke="var(--figure-line, #728895)" stroke-width="1.8"/>
     </g>
   </defs>
-  <rect width="720" height="376" fill="#f7f8f6"/>
-  <g font-family="Inter, Arial, sans-serif" fill="#00274c">
-    <g fill="none" stroke="#ccd5d5">
+  <rect width="720" height="376" fill="var(--figure-canvas, #f7f8f6)"/>
+  <g font-family="Inter, Arial, sans-serif" fill="var(--figure-ink, #00274c)">
+    <g fill="none" stroke="var(--figure-border, #ccd5d5)">
       <rect x="36" y="36" width="200" height="304" rx="8"/>
       <rect x="260" y="36" width="200" height="304" rx="8"/>
       <rect x="484" y="36" width="200" height="304" rx="8"/>
@@ -55,11 +70,11 @@
         <text x="584" y="164">Slack</text>
       </g>
       <g font-size="20">
-        <text x="136" y="199" fill="#006f78">Regular<tspan x="136" dy="26">conversations</tspan></text>
-        <text x="360" y="199" fill="#346aa0">About every<tspan x="360" dy="26">two weeks</tspan></text>
-        <text x="584" y="199" fill="#6c5b9d">Between<tspan x="584" dy="26">meetings</tspan></text>
+        <text x="136" y="199" fill="var(--figure-teal, #006f78)">Regular<tspan x="136" dy="26">conversations</tspan></text>
+        <text x="360" y="199" fill="var(--figure-blue, #346aa0)">About every<tspan x="360" dy="26">two weeks</tspan></text>
+        <text x="584" y="199" fill="var(--figure-purple, #6c5b9d)">Between<tspan x="584" dy="26">meetings</tspan></text>
       </g>
-      <g font-size="19" fill="#52606d">
+      <g font-size="19" fill="var(--figure-muted, #52606d)">
         <text x="136" y="266">Your project,<tspan x="136" dy="26">questions and</tspan><tspan x="136" dy="26">next steps</tspan></text>
         <text x="360" y="266">Discuss science<tspan x="360" dy="26">and learn from</tspan><tspan x="360" dy="26">each other</tspan></text>
         <text x="584" y="266">Ask questions<tspan x="584" dy="26">and share useful</tspan><tspan x="584" dy="26">resources</tspan></text>

@@ -8,34 +8,88 @@
   <author><name>Fritsche Lab</name></author>
   
   <entry>
+    <title>Studying depressive symptoms after surgery</title>
+    <link href="https://fritschelab.org/news/postoperative-depression-project-2026/"/>
+    <id>https://fritschelab.org/news/postoperative-depression-project-2026/</id>
+    <updated>2026-06-08T00:00:00-04:00</updated>
+    <summary type="html">A two-year project aims to identify patients who may need additional support for depressive symptoms after surgery.</summary>
+  </entry><entry>
     <title>U-M researchers aim to shorten the path to effective mental health care</title>
     <link href="https://fritschelab.org/news/compass-mental-health-care-2026/"/>
     <id>https://fritschelab.org/news/compass-mental-health-care-2026/</id>
     <updated>2026-06-08T00:00:00-04:00</updated>
-    <summary type="html">U-M Research explains how COMPASS studies differences in responses to mental health treatment.</summary>
+    <summary type="html">COMPASS participants contribute repeated reports, genetic samples, and health record data to study why mental health treatment responses differ.</summary>
+  </entry><entry>
+    <title>Comparing cancer immunotherapy outcomes in Black and white patients</title>
+    <link href="https://fritschelab.org/news/cancer-immunotherapy-outcomes-2024/"/>
+    <id>https://fritschelab.org/news/cancer-immunotherapy-outcomes-2024/</id>
+    <updated>2024-12-04T00:00:00-05:00</updated>
+    <summary type="html">A study using Veterans Health Administration records compared survival and immune-related adverse events in Black and white patients receiving cancer immunotherapy.</summary>
   </entry><entry>
     <title>MGI 2024: Lars Fritsche</title>
     <link href="https://fritschelab.org/news/mgi-2024-lars-fritsche-video/"/>
     <id>https://fritschelab.org/news/mgi-2024-lars-fritsche-video/</id>
     <updated>2024-10-15T00:00:00-04:00</updated>
-    <summary type="html">In this U-M symposium talk, Lars Fritsche reviews a decade of EHR-linked genetics research, including PheWeb and PRSweb.</summary>
+    <summary type="html">A U-M symposium talk by Lars Fritsche examines a decade of genetics research linked to electronic health records, with examples from PheWeb and PRSweb.</summary>
   </entry><entry>
     <title>U-M announces NIMH-backed COMPASS precision mental health grant</title>
     <link href="https://fritschelab.org/news/compass-grant-2024/"/>
     <id>https://fritschelab.org/news/compass-grant-2024/</id>
     <updated>2024-07-09T00:00:00-04:00</updated>
-    <summary type="html">NIMH awarded $17.9 million to the COMPASS precision mental health collaboration.</summary>
+    <summary type="html">A $17.9 million NIMH award supports COMPASS, a collaboration studying differences in mental health treatment response.</summary>
+  </entry><entry>
+    <title>Comparing methods for evaluating COVID-19 booster effectiveness</title>
+    <link href="https://fritschelab.org/news/covid-vaccine-effectiveness-2024/"/>
+    <id>https://fritschelab.org/news/covid-vaccine-effectiveness-2024/</id>
+    <updated>2024-02-01T00:00:00-05:00</updated>
+    <summary type="html">A comparison of observational methods examined how study design and analysis choices affect estimates of COVID-19 booster effectiveness.</summary>
+  </entry><entry>
+    <title>Estimating the global prevalence of long COVID</title>
+    <link href="https://fritschelab.org/news/long-covid-prevalence-2022/"/>
+    <id>https://fritschelab.org/news/long-covid-prevalence-2022/</id>
+    <updated>2022-04-20T00:00:00-04:00</updated>
+    <summary type="html">A systematic review and meta-analysis combined 50 studies to compare long COVID prevalence across regions, follow-up periods, and hospitalization status.</summary>
+  </entry><entry>
+    <title>Evaluating cancer polygenic risk scores across ancestry groups</title>
+    <link href="https://fritschelab.org/news/cross-ancestry-cancer-prs-2021/"/>
+    <id>https://fritschelab.org/news/cross-ancestry-cancer-prs-2021/</id>
+    <updated>2021-09-16T00:00:00-04:00</updated>
+    <summary type="html">Cancer polygenic risk scores were evaluated across ancestry groups in UK Biobank, highlighting the need for more diverse genetic studies.</summary>
   </entry><entry>
     <title>Democratizing genetic data for cancer research</title>
     <link href="https://fritschelab.org/news/cancer-prsweb-genetic-data-2020/"/>
     <id>https://fritschelab.org/news/cancer-prsweb-genetic-data-2020/</id>
     <updated>2020-11-20T00:00:00-05:00</updated>
-    <summary type="html">Michigan IT covered the launch of Cancer PRSweb and its public comparisons of polygenic risk scores.</summary>
+    <summary type="html">Cancer PRSweb provides archived comparisons of cancer polygenic risk scores in the Michigan Genomics Initiative and UK Biobank.</summary>
+  </entry><entry>
+    <title>Genetic risk for abdominal aortic aneurysm</title>
+    <link href="https://fritschelab.org/news/abdominal-aortic-aneurysm-genetics-2020/"/>
+    <id>https://fritschelab.org/news/abdominal-aortic-aneurysm-genetics-2020/</id>
+    <updated>2020-09-28T00:00:00-04:00</updated>
+    <summary type="html">A genetic study in the Million Veteran Program identified regions associated with abdominal aortic aneurysm and evaluated a polygenic risk score.</summary>
+  </entry><entry>
+    <title>Max Salvatore on COVID-19 modeling in India</title>
+    <link href="https://fritschelab.org/news/covid-modeling-max-salvatore-2020/"/>
+    <id>https://fritschelab.org/news/covid-modeling-max-salvatore-2020/</id>
+    <updated>2020-09-22T00:00:00-04:00</updated>
+    <summary type="html">Max Salvatore reflects on his cancer research experience and subsequent work modeling COVID-19 in India.</summary>
   </entry><entry>
     <title>Eye expert leads research to better predict blindness in patients</title>
     <link href="https://fritschelab.org/news/amd-blindness-prediction-funding-2018/"/>
     <id>https://fritschelab.org/news/amd-blindness-prediction-funding-2018/</id>
     <updated>2018-07-12T00:00:00-04:00</updated>
-    <summary type="html">The University of Southampton announced Wellcome Trust support for an international study of age-related macular degeneration (AMD) progression.</summary>
+    <summary type="html">An international collaboration combines clinical measures, retinal imaging, genetics, and machine learning to study progression of age-related macular degeneration.</summary>
+  </entry><entry>
+    <title>Evaluating cancer polygenic risk scores in the Michigan Genomics Initiative</title>
+    <link href="https://fritschelab.org/news/cancer-polygenic-scores-2018/"/>
+    <id>https://fritschelab.org/news/cancer-polygenic-scores-2018/</id>
+    <updated>2018-05-18T00:00:00-04:00</updated>
+    <summary type="html">Cancer polygenic risk scores were associated with diagnoses of cancers and related conditions in the Michigan Genomics Initiative.</summary>
+  </entry><entry>
+    <title>Common and rare genetic variants in age-related macular degeneration</title>
+    <link href="https://fritschelab.org/news/amd-genetic-clues-2015/"/>
+    <id>https://fritschelab.org/news/amd-genetic-clues-2015/</id>
+    <updated>2015-12-21T00:00:00-05:00</updated>
+    <summary type="html">An international study of about 43,000 people identified common and rare genetic variants associated with age-related macular degeneration.</summary>
   </entry>
 </feed>

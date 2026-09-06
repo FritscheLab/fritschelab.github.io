@@ -1,40 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-labelledby="mental-health-title mental-health-desc">
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-labelledby="mental-health-title mental-health-desc">
   <title id="mental-health-title">Studying mental health treatment response</title>
   <desc id="mental-health-desc">Genetic data, clinical context including treatment history, and patient reports are combined to study mental health treatment response over time. Three qualitative trajectories represent illustrative response patterns, not participant data or results. Models are tested in a separate dataset when a suitable dataset is available.</desc>
+  <style>
+    :root:target {
+      --figure-border: #344b60;
+      --figure-canvas: #142536;
+      --figure-ink: #e8f1fa;
+      --figure-line: #8ba3b8;
+      --figure-muted: #a7b8c8;
+      --figure-secondary-line: #8ba3b8;
+      --figure-soft: #192d40;
+      --figure-teal: #6dcac3;
+      --figure-teal-border: #365c63;
+      --figure-teal-line: #78b4b6;
+      --figure-teal-soft: #163d41;
+    }
+  </style>
   <defs>
     
     <g id="genetic-information" transform="translate(-16 -38.4) scale(.8)" fill="none" stroke-linecap="round">
-      <path d="M1.652 4H38.348M12.457 12H27.543M12.457 20H27.543M1.652 28H38.348M1.652 36H38.348M12.457 44H27.543M12.457 52H27.543M1.652 60H38.348M1.652 68H38.348M12.457 76H27.543M12.457 84H27.543M1.652 92H38.348" stroke="#87b3b5" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-      <path d="M0 0C0 5.333 9.528 10.667 20 16C30.472 21.333 40 26.667 40 32C40 37.333 30.472 42.667 20 48C9.528 53.333 0 58.667 0 64C0 69.333 9.528 74.667 20 80C30.472 85.333 40 90.667 40 96" stroke="#006f78" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
-      <path d="M40 0C40 5.333 30.472 10.667 20 16C9.528 21.333 0 26.667 0 32C0 37.333 9.528 42.667 20 48C30.472 53.333 40 58.667 40 64C40 69.333 30.472 74.667 20 80C9.528 85.333 0 90.667 0 96" stroke="#00274c" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+      <path d="M1.652 4H38.348M12.457 12H27.543M12.457 20H27.543M1.652 28H38.348M1.652 36H38.348M12.457 44H27.543M12.457 52H27.543M1.652 60H38.348M1.652 68H38.348M12.457 76H27.543M12.457 84H27.543M1.652 92H38.348" stroke="var(--figure-teal-line, #87b3b5)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+      <path d="M0 0C0 5.333 9.528 10.667 20 16C30.472 21.333 40 26.667 40 32C40 37.333 30.472 42.667 20 48C9.528 53.333 0 58.667 0 64C0 69.333 9.528 74.667 20 80C30.472 85.333 40 90.667 40 96" stroke="var(--figure-teal, #006f78)" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+      <path d="M40 0C40 5.333 30.472 10.667 20 16C9.528 21.333 0 26.667 0 32C0 37.333 9.528 42.667 20 48C30.472 53.333 40 58.667 40 64C40 69.333 30.472 74.667 20 80C9.528 85.333 0 90.667 0 96" stroke="var(--figure-ink, #00274c)" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
     </g>
     
     <g id="clinical-information" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M-34-34H4L17-21V34H-34Z" fill="#eef1ef" stroke="#728895" stroke-width="1.8"/>
-      <path d="M4-34v13h13" stroke="#728895" stroke-width="1.8"/>
-      <circle cx="-16" cy="-15" r="5" stroke="#00274c" stroke-width="2"/>
-      <path d="M-25 0c0-10 18-10 18 0M-24 12H5M-24 22H-8" stroke="#00274c" stroke-width="2"/>
+      <path d="M-34-34H4L17-21V34H-34Z" fill="var(--figure-soft, #eef1ef)" stroke="var(--figure-line, #728895)" stroke-width="1.8"/>
+      <path d="M4-34v13h13" stroke="var(--figure-line, #728895)" stroke-width="1.8"/>
+      <circle cx="-16" cy="-15" r="5" stroke="var(--figure-ink, #00274c)" stroke-width="2"/>
+      <path d="M-25 0c0-10 18-10 18 0M-24 12H5M-24 22H-8" stroke="var(--figure-ink, #00274c)" stroke-width="2"/>
       <g transform="translate(24 14) rotate(35)">
-        <rect x="-10" y="-22" width="20" height="44" rx="10" fill="#f7f8f6" stroke="#006f78" stroke-width="2.5"/>
-        <path d="M-10 0H10" stroke="#006f78" stroke-width="2"/>
+        <rect x="-10" y="-22" width="20" height="44" rx="10" fill="var(--figure-canvas, #f7f8f6)" stroke="var(--figure-teal, #006f78)" stroke-width="2.5"/>
+        <path d="M-10 0H10" stroke="var(--figure-teal, #006f78)" stroke-width="2"/>
       </g>
     </g>
     
     <g id="patient-information" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M-40-28H40V22H-17L-31 34V22H-40Z" fill="#eef1ef" stroke="#728895" stroke-width="1.8"/>
-      <path d="M-27-14H23M-27-6H7" stroke="#00274c" stroke-width="2"/>
-      <g stroke="#006f78" stroke-width="2">
+      <path d="M-40-28H40V22H-17L-31 34V22H-40Z" fill="var(--figure-soft, #eef1ef)" stroke="var(--figure-line, #728895)" stroke-width="1.8"/>
+      <path d="M-27-14H23M-27-6H7" stroke="var(--figure-ink, #00274c)" stroke-width="2"/>
+      <g stroke="var(--figure-teal, #006f78)" stroke-width="2">
         <circle cx="-24" cy="9" r="4"/>
-        <circle cy="9" r="4" fill="#006f78"/>
+        <circle cy="9" r="4" fill="var(--figure-teal, #006f78)"/>
         <circle cx="24" cy="9" r="4"/>
       </g>
     </g>
   </defs>
-  <rect width="720" height="480" fill="#f7f8f6"/>
-  <g font-family="Inter, Arial, sans-serif" fill="#00274c">
+  <rect width="720" height="480" fill="var(--figure-canvas, #f7f8f6)"/>
+  <g font-family="Inter, Arial, sans-serif" fill="var(--figure-ink, #00274c)">
     <text x="36" y="55" font-size="28" font-weight="600" letter-spacing="-.5">Study treatment response</text>
-    <text x="36" y="86" font-size="18" fill="#52606d">Combine complementary information</text>
-    <g fill="none" stroke="#ccd5d5">
+    <text x="36" y="86" font-size="18" fill="var(--figure-muted, #52606d)">Combine complementary information</text>
+    <g fill="none" stroke="var(--figure-border, #ccd5d5)">
       <rect x="36" y="113" width="200" height="157" rx="8"/>
       <rect x="260" y="113" width="200" height="157" rx="8"/>
       <rect x="484" y="113" width="200" height="157" rx="8"/>
@@ -46,30 +61,30 @@
       <text x="136" y="221" font-size="23" font-weight="600" letter-spacing="-.4">Genetic data</text>
       <text x="360" y="221" font-size="23" font-weight="600" letter-spacing="-.4">Clinical context</text>
       <text x="584" y="221" font-size="23" font-weight="600" letter-spacing="-.4">Patient reports</text>
-      <g font-size="18" fill="#52606d">
+      <g font-size="18" fill="var(--figure-muted, #52606d)">
         <text x="136" y="249">Inherited variation</text>
         <text x="360" y="249">Treatment and history</text>
         <text x="584" y="249">Symptoms over time</text>
       </g>
     </g>
-    <path d="M136 270v18H584V270M360 270v34m-5-6 5 6 5-6" fill="none" stroke="#728895" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="36" y="312" width="648" height="80" rx="8" fill="#eaf2f2" stroke="#bdd4d5"/>
+    <path d="M136 270v18H584V270M360 270v34m-5-6 5 6 5-6" fill="none" stroke="var(--figure-line, #728895)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="36" y="312" width="648" height="80" rx="8" fill="var(--figure-teal-soft, #eaf2f2)" stroke="var(--figure-teal-border, #bdd4d5)"/>
     <text x="52" y="344" font-size="23" font-weight="600" letter-spacing="-.4">Response over time</text>
-    <text x="52" y="372" font-size="18" fill="#52606d">Illustrative patterns</text>
-    <g fill="none" stroke="#ccd5d5" stroke-width="1">
+    <text x="52" y="372" font-size="18" fill="var(--figure-muted, #52606d)">Illustrative patterns</text>
+    <g fill="none" stroke="var(--figure-border, #ccd5d5)" stroke-width="1">
       <path d="M326 325v54M434 325v54M542 325v54M660 325v54"/>
     </g>
     <g fill="none" stroke-width="2.5" stroke-linecap="round">
-      <path d="M326 336C362 336 398 348 434 348S506 331 542 331 624 342 660 342" stroke="#006f78"/>
-      <path d="M326 352C362 352 398 355 434 355S506 351 542 351 624 368 660 368" stroke="#00274c"/>
-      <path d="M326 373C362 373 398 365 434 365S506 377 542 377 624 358 660 358" stroke="#718a97"/>
+      <path d="M326 336C362 336 398 348 434 348S506 331 542 331 624 342 660 342" stroke="var(--figure-teal, #006f78)"/>
+      <path d="M326 352C362 352 398 355 434 355S506 351 542 351 624 368 660 368" stroke="var(--figure-ink, #00274c)"/>
+      <path d="M326 373C362 373 398 365 434 365S506 377 542 377 624 358 660 358" stroke="var(--figure-secondary-line, #718a97)"/>
     </g>
-    <g fill="#eaf2f2" stroke-width="2">
-      <g stroke="#006f78"><circle cx="326" cy="336" r="3.5"/><circle cx="434" cy="348" r="3.5"/><circle cx="542" cy="331" r="3.5"/><circle cx="660" cy="342" r="3.5"/></g>
-      <g stroke="#00274c"><circle cx="326" cy="352" r="3.5"/><circle cx="434" cy="355" r="3.5"/><circle cx="542" cy="351" r="3.5"/><circle cx="660" cy="368" r="3.5"/></g>
-      <g stroke="#718a97"><circle cx="326" cy="373" r="3.5"/><circle cx="434" cy="365" r="3.5"/><circle cx="542" cy="377" r="3.5"/><circle cx="660" cy="358" r="3.5"/></g>
+    <g fill="var(--figure-teal-soft, #eaf2f2)" stroke-width="2">
+      <g stroke="var(--figure-teal, #006f78)"><circle cx="326" cy="336" r="3.5"/><circle cx="434" cy="348" r="3.5"/><circle cx="542" cy="331" r="3.5"/><circle cx="660" cy="342" r="3.5"/></g>
+      <g stroke="var(--figure-ink, #00274c)"><circle cx="326" cy="352" r="3.5"/><circle cx="434" cy="355" r="3.5"/><circle cx="542" cy="351" r="3.5"/><circle cx="660" cy="368" r="3.5"/></g>
+      <g stroke="var(--figure-secondary-line, #718a97)"><circle cx="326" cy="373" r="3.5"/><circle cx="434" cy="365" r="3.5"/><circle cx="542" cy="377" r="3.5"/><circle cx="660" cy="358" r="3.5"/></g>
     </g>
     <text x="36" y="432" font-size="24" font-weight="600" letter-spacing="-.4">Test in a separate dataset</text>
-    <text x="36" y="461" font-size="18" fill="#52606d">When a suitable dataset is available</text>
+    <text x="36" y="461" font-size="18" fill="var(--figure-muted, #52606d)">When a suitable dataset is available</text>
   </g>
 </svg>

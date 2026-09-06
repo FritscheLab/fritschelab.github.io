@@ -1,37 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200" role="img" aria-labelledby="mental-health-preview-title mental-health-preview-desc">
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200" role="img" aria-labelledby="mental-health-preview-title mental-health-preview-desc">
   <title id="mental-health-preview-title">Complementary information for studying treatment response</title>
   <desc id="mental-health-preview-desc">A DNA helix, a clinical record with treatment history, and a patient report represent complementary information used to study mental health treatment response. Conceptual preview, not measured results.</desc>
+  <style>
+    :root:target {
+      --figure-border: #344b60;
+      --figure-canvas: #142536;
+      --figure-ink: #e8f1fa;
+      --figure-line: #8ba3b8;
+      --figure-soft: #192d40;
+      --figure-teal: #6dcac3;
+      --figure-teal-line: #78b4b6;
+    }
+  </style>
   <defs>
     
     <g id="genetic-information" transform="translate(-16 -38.4) scale(.8)" fill="none" stroke-linecap="round">
-      <path d="M1.652 4H38.348M12.457 12H27.543M12.457 20H27.543M1.652 28H38.348M1.652 36H38.348M12.457 44H27.543M12.457 52H27.543M1.652 60H38.348M1.652 68H38.348M12.457 76H27.543M12.457 84H27.543M1.652 92H38.348" stroke="#87b3b5" stroke-width="1.875" />
-      <path d="M0 0C0 5.333 9.528 10.667 20 16C30.472 21.333 40 26.667 40 32C40 37.333 30.472 42.667 20 48C9.528 53.333 0 58.667 0 64C0 69.333 9.528 74.667 20 80C30.472 85.333 40 90.667 40 96" stroke="#006f78" stroke-width="3.125" />
-      <path d="M40 0C40 5.333 30.472 10.667 20 16C9.528 21.333 0 26.667 0 32C0 37.333 9.528 42.667 20 48C30.472 53.333 40 58.667 40 64C40 69.333 30.472 74.667 20 80C9.528 85.333 0 90.667 0 96" stroke="#00274c" stroke-width="3.125" />
+      <path d="M1.652 4H38.348M12.457 12H27.543M12.457 20H27.543M1.652 28H38.348M1.652 36H38.348M12.457 44H27.543M12.457 52H27.543M1.652 60H38.348M1.652 68H38.348M12.457 76H27.543M12.457 84H27.543M1.652 92H38.348" stroke="var(--figure-teal-line, #87b3b5)" stroke-width="1.875" />
+      <path d="M0 0C0 5.333 9.528 10.667 20 16C30.472 21.333 40 26.667 40 32C40 37.333 30.472 42.667 20 48C9.528 53.333 0 58.667 0 64C0 69.333 9.528 74.667 20 80C30.472 85.333 40 90.667 40 96" stroke="var(--figure-teal, #006f78)" stroke-width="3.125" />
+      <path d="M40 0C40 5.333 30.472 10.667 20 16C9.528 21.333 0 26.667 0 32C0 37.333 9.528 42.667 20 48C30.472 53.333 40 58.667 40 64C40 69.333 30.472 74.667 20 80C9.528 85.333 0 90.667 0 96" stroke="var(--figure-ink, #00274c)" stroke-width="3.125" />
     </g>
 
     <g id="clinical-information" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M-34-34H4L17-21V34H-34Z" fill="#eef1ef" stroke="#728895" stroke-width="2.25" />
-      <path d="M4-34v13h13" stroke="#728895" stroke-width="2.25" />
-      <circle cx="-16" cy="-15" r="5" stroke="#00274c" stroke-width="2.5" />
-      <path d="M-25 0c0-10 18-10 18 0M-24 12H5M-24 22H-8" stroke="#00274c" stroke-width="2.5" />
+      <path d="M-34-34H4L17-21V34H-34Z" fill="var(--figure-soft, #eef1ef)" stroke="var(--figure-line, #728895)" stroke-width="2.25" />
+      <path d="M4-34v13h13" stroke="var(--figure-line, #728895)" stroke-width="2.25" />
+      <circle cx="-16" cy="-15" r="5" stroke="var(--figure-ink, #00274c)" stroke-width="2.5" />
+      <path d="M-25 0c0-10 18-10 18 0M-24 12H5M-24 22H-8" stroke="var(--figure-ink, #00274c)" stroke-width="2.5" />
       <g transform="translate(24 14) rotate(35)">
-        <rect x="-10" y="-22" width="20" height="44" rx="10" fill="#f7f8f6" stroke="#006f78" stroke-width="3.125" />
-        <path d="M-10 0H10" stroke="#006f78" stroke-width="2.5" />
+        <rect x="-10" y="-22" width="20" height="44" rx="10" fill="var(--figure-canvas, #f7f8f6)" stroke="var(--figure-teal, #006f78)" stroke-width="3.125" />
+        <path d="M-10 0H10" stroke="var(--figure-teal, #006f78)" stroke-width="2.5" />
       </g>
     </g>
 
     <g id="patient-information" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M-40-28H40V22H-17L-31 34V22H-40Z" fill="#eef1ef" stroke="#728895" stroke-width="2.25" />
-      <path d="M-27-14H23M-27-6H7" stroke="#00274c" stroke-width="2.5" />
-      <g stroke="#006f78" stroke-width="2.5">
+      <path d="M-40-28H40V22H-17L-31 34V22H-40Z" fill="var(--figure-soft, #eef1ef)" stroke="var(--figure-line, #728895)" stroke-width="2.25" />
+      <path d="M-27-14H23M-27-6H7" stroke="var(--figure-ink, #00274c)" stroke-width="2.5" />
+      <g stroke="var(--figure-teal, #006f78)" stroke-width="2.5">
         <circle cx="-24" cy="9" r="4" />
-        <circle cy="9" r="4" fill="#006f78" />
+        <circle cy="9" r="4" fill="var(--figure-teal, #006f78)" />
         <circle cx="24" cy="9" r="4" />
       </g>
     </g>
     </defs>
-  <rect width="400" height="200" fill="#f7f8f6"/>
-  <g fill="none" stroke="#ccd5d5" stroke-width="1.5">
+  <rect width="400" height="200" fill="var(--figure-canvas, #f7f8f6)"/>
+  <g fill="none" stroke="var(--figure-border, #ccd5d5)" stroke-width="1.5">
     <rect x="16" y="32" width="112" height="136" rx="8"/>
     <rect x="144" y="32" width="112" height="136" rx="8"/>
     <rect x="272" y="32" width="112" height="136" rx="8"/>

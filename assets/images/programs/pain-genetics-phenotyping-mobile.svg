@@ -1,54 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600" role="img" aria-labelledby="pain-mobile-title pain-mobile-desc">
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600" role="img" aria-labelledby="pain-mobile-title pain-mobile-desc">
   <title id="pain-mobile-title">Three mechanisms of pain that can coexist</title>
   <desc id="pain-mobile-desc">Conceptual comparison of pain mechanisms that can coexist. Nociceptive pain is illustrated by tissue injury with sensory endings; neuropathic pain by a locally disrupted myelinated axon; and nociplastic pain by a processing circuit with qualitative signal amplification as one example of altered nociception.</desc>
+  <style>
+    :root:target {
+      --figure-border: #344b60;
+      --figure-canvas: #142536;
+      --figure-ink: #e8f1fa;
+      --figure-line: #8ba3b8;
+      --figure-muted: #a7b8c8;
+      --figure-neutral-soft: #203244;
+      --figure-rust: #e7a38a;
+      --figure-rust-border: #74584d;
+      --figure-rust-soft: #402c28;
+      --figure-soft: #192d40;
+    }
+  </style>
   <defs>
     
     <g id="tissue-schematic" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M-66-22H-13L-3-13 6-25 15-22H66V28H-66Z" fill="#eef1ef" stroke="#ccd5d5" stroke-width="1.5"/>
-      <path d="M-66-22H-13L-3-13 6-25 15-22H66" fill="none" stroke="#9c4f2f" stroke-width="2.5"/>
-      <path d="M-57 0h17M39 0h18M-57 15h17M39 15h18" stroke="#ccd5d5" stroke-width="1.5"/>
-      <path d="M0 38V12M0 18-26 2V-7M-26 2-39-7M0 9 22-3v-7M22-3 34-9M0 12V-3" fill="none" stroke="#00274c" stroke-width="2.5"/>
-      <g fill="#9c4f2f">
+      <path d="M-66-22H-13L-3-13 6-25 15-22H66V28H-66Z" fill="var(--figure-soft, #eef1ef)" stroke="var(--figure-line, #ccd5d5)" stroke-width="1.5"/>
+      <path d="M-66-22H-13L-3-13 6-25 15-22H66" fill="none" stroke="var(--figure-rust, #9c4f2f)" stroke-width="2.5"/>
+      <path d="M-57 0h17M39 0h18M-57 15h17M39 15h18" stroke="var(--figure-line, #ccd5d5)" stroke-width="1.5"/>
+      <path d="M0 38V12M0 18-26 2V-7M-26 2-39-7M0 9 22-3v-7M22-3 34-9M0 12V-3" fill="none" stroke="var(--figure-ink, #00274c)" stroke-width="2.5"/>
+      <g fill="var(--figure-rust, #9c4f2f)">
         <circle cx="-26" cy="-7" r="3"/><circle cx="-39" cy="-7" r="3"/>
         <circle cx="22" cy="-10" r="3"/><circle cx="34" cy="-9" r="3"/><circle cy="-3" r="3"/>
       </g>
     </g>
     
     <g id="axon-schematic" stroke-linecap="round" stroke-linejoin="round">
-      <g fill="#edf0f1" stroke="#728895" stroke-width="1.8">
+      <g fill="var(--figure-neutral-soft, #edf0f1)" stroke="var(--figure-line, #728895)" stroke-width="1.8">
         <rect x="-61" y="-12" width="20" height="24" rx="9"/>
         <rect x="-33" y="-12" width="20" height="24" rx="9"/>
         <rect x="17" y="-12" width="20" height="24" rx="9"/>
         <rect x="45" y="-12" width="20" height="24" rx="9"/>
       </g>
-      <path d="M-70 0H-12M16 0h55" fill="none" stroke="#00274c" stroke-width="2.5"/>
-      <path d="m-12 0 7-4 5 7 6-5 10 2M-7-14l7 3 8-5M-6 16l7-4 8 3" fill="none" stroke="#9c4f2f" stroke-width="2.5"/>
+      <path d="M-70 0H-12M16 0h55" fill="none" stroke="var(--figure-ink, #00274c)" stroke-width="2.5"/>
+      <path d="m-12 0 7-4 5 7 6-5 10 2M-7-14l7 3 8-5M-6 16l7-4 8 3" fill="none" stroke="var(--figure-rust, #9c4f2f)" stroke-width="2.5"/>
     </g>
     
     <g id="processing-schematic" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M-73 0h7l4-7 5 14 5-7h11M40 0h8l6-23 7 46 6-23h7" stroke="#9c4f2f" stroke-width="2.5"/>
-      <path d="M-38 0h10l9-10M19-10l9 10h9M-15-13 15-13 0 15ZM-15-18v-4C-15-39 15-39 15-22v4m-4-4 4 4 4-4" stroke="#728895" stroke-width="1.8"/>
-      <circle cx="-15" cy="-13" r="5" fill="#f1e8e2" stroke="#00274c" stroke-width="2"/>
-      <circle cx="15" cy="-13" r="5" fill="#f1e8e2" stroke="#00274c" stroke-width="2"/>
-      <circle cy="15" r="5" fill="#f1e8e2" stroke="#00274c" stroke-width="2"/>
+      <path d="M-73 0h7l4-7 5 14 5-7h11M40 0h8l6-23 7 46 6-23h7" stroke="var(--figure-rust, #9c4f2f)" stroke-width="2.5"/>
+      <path d="M-38 0h10l9-10M19-10l9 10h9M-15-13 15-13 0 15ZM-15-18v-4C-15-39 15-39 15-22v4m-4-4 4 4 4-4" stroke="var(--figure-line, #728895)" stroke-width="1.8"/>
+      <circle cx="-15" cy="-13" r="5" fill="var(--figure-rust-soft, #f1e8e2)" stroke="var(--figure-ink, #00274c)" stroke-width="2"/>
+      <circle cx="15" cy="-13" r="5" fill="var(--figure-rust-soft, #f1e8e2)" stroke="var(--figure-ink, #00274c)" stroke-width="2"/>
+      <circle cy="15" r="5" fill="var(--figure-rust-soft, #f1e8e2)" stroke="var(--figure-ink, #00274c)" stroke-width="2"/>
     </g>
   </defs>
-  <rect width="400" height="600" fill="#f7f8f6"/>
-  <g font-family="Inter, Arial, sans-serif" fill="#00274c">
+  <rect width="400" height="600" fill="var(--figure-canvas, #f7f8f6)"/>
+  <g font-family="Inter, Arial, sans-serif" fill="var(--figure-ink, #00274c)">
     <text x="24" y="44" font-size="28" font-weight="600" letter-spacing="-.5">Three mechanisms<tspan x="24" dy="32">of pain</tspan></text>
-    <rect x="24" y="108" width="352" height="114" rx="8" fill="none" stroke="#ccd5d5"/>
+    <rect x="24" y="108" width="352" height="114" rx="8" fill="none" stroke="var(--figure-border, #ccd5d5)"/>
     <text x="40" y="142" font-size="23" font-weight="600" letter-spacing="-.4">Nociceptive</text>
-    <text x="40" y="174" font-size="19" fill="#52606d">Tissue injury<tspan x="40" dy="25">or inflammation</tspan></text>
+    <text x="40" y="174" font-size="19" fill="var(--figure-muted, #52606d)">Tissue injury<tspan x="40" dy="25">or inflammation</tspan></text>
     <use href="#tissue-schematic" transform="translate(291 166) scale(.96)"/>
-    <rect x="24" y="237" width="352" height="114" rx="8" fill="none" stroke="#ccd5d5"/>
+    <rect x="24" y="237" width="352" height="114" rx="8" fill="none" stroke="var(--figure-border, #ccd5d5)"/>
     <text x="40" y="271" font-size="23" font-weight="600" letter-spacing="-.4">Neuropathic</text>
-    <text x="40" y="303" font-size="19" fill="#52606d">Neural lesion<tspan x="40" dy="25">or disease</tspan></text>
+    <text x="40" y="303" font-size="19" fill="var(--figure-muted, #52606d)">Neural lesion<tspan x="40" dy="25">or disease</tspan></text>
     <use href="#axon-schematic" transform="translate(291 295) scale(.96)"/>
-    <rect x="24" y="366" width="352" height="114" rx="8" fill="#f1e8e2" stroke="#d5b3a3"/>
+    <rect x="24" y="366" width="352" height="114" rx="8" fill="var(--figure-rust-soft, #f1e8e2)" stroke="var(--figure-rust-border, #d5b3a3)"/>
     <text x="40" y="400" font-size="23" font-weight="600" letter-spacing="-.4">Nociplastic</text>
-    <text x="40" y="432" font-size="19" fill="#52606d">Altered<tspan x="40" dy="25">nociception</tspan></text>
+    <text x="40" y="432" font-size="19" fill="var(--figure-muted, #52606d)">Altered<tspan x="40" dy="25">nociception</tspan></text>
     <use href="#processing-schematic" transform="translate(291 424) scale(.96)"/>
     <text x="24" y="524" font-size="24" font-weight="600" letter-spacing="-.4">Mechanisms can coexist</text>
-    <text x="24" y="554" font-size="19" fill="#52606d">Mechanistic contributions vary<tspan x="24" dy="26">within and across diagnoses.</tspan></text>
+    <text x="24" y="554" font-size="19" fill="var(--figure-muted, #52606d)">Mechanistic contributions vary<tspan x="24" dy="26">within and across diagnoses.</tspan></text>
   </g>
 </svg>

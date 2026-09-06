@@ -29,7 +29,7 @@
 <link rel="icon" href="/assets/images/fritsche-lab-favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/atom+xml" title="Fritsche Lab updates" href="/feed.xml">
 <script src="/assets/js/theme.js"></script>
-<link rel="stylesheet" href="/assets/css/site.css?v=1788708613">
+<link rel="stylesheet" href="/assets/css/site.css?v=1788726893">
 
 <script type="application/ld+json">{  "@context": "https://schema.org",    "@type": "ResearchOrganization",  "name": "Fritsche Lab",  "url": "https://fritschelab.org/",  "logo": "https://fritschelab.org/assets/images/fritsche-lab-logo.svg",  "description": "The Fritsche Lab studies how genomic and multimodal prediction models perform across biobanks, health systems, and patient populations.",  "email": "mailto:larsf+lab@umich.edu",  "parentOrganization": {"@type": "CollegeOrUniversity", "name": "University of Michigan", "url": "https://umich.edu/"},  "sameAs": ["https://github.com/FritscheLab"]  }</script>
 
@@ -99,12 +99,12 @@
       <p class="validation-figure__subhead">One cohort</p>
       <svg viewBox="0 0 260 276" role="img" aria-labelledby="development-title development-desc">
         <title id="development-title">Model development</title>
-        <desc id="development-desc">A navy model curve follows a set of blue observations in the development cohort. These marks are illustrative, not measured results.</desc>
+        <desc id="development-desc">A model curve follows a set of blue observations in the development cohort. These marks are illustrative, not measured results.</desc>
         <g class="validation-figure__grid" fill="none">
           <path d="M20 58H250 M20 116H250 M20 174H250 M78 26V232 M136 26V232 M194 26V232" />
         </g>
         <path class="validation-figure__axis" d="M20 26V232H250" fill="none" />
-        <g class="validation-figure__observations" fill="#346aa0">
+        <g class="validation-figure__observations">
           <circle cx="29" cy="218" r="3" /><circle cx="34" cy="195" r="3" />
           <circle cx="43" cy="226" r="3" /><circle cx="46" cy="203" r="3" />
           <circle cx="54" cy="185" r="3" /><circle cx="57" cy="214" r="3" />
@@ -135,7 +135,7 @@
       <p class="validation-figure__subhead">An independent cohort</p>
       <svg viewBox="0 0 260 276" role="img" aria-labelledby="validation-title validation-desc">
         <title id="validation-title">Independent evaluation</title>
-        <desc id="validation-desc">The identical navy curve is tested against a different set of teal observations. Fine vertical lines mark selected differences between the model and observations. These marks are illustrative, not measured results.</desc>
+        <desc id="validation-desc">The identical model curve is tested against a different set of teal observations. Fine vertical lines mark selected differences between the model and observations. These marks are illustrative, not measured results.</desc>
         <g class="validation-figure__grid" fill="none">
           <path d="M20 58H250 M20 116H250 M20 174H250 M78 26V232 M136 26V232 M194 26V232" />
         </g>
@@ -143,7 +143,7 @@
         <g class="validation-figure__differences" fill="none">
           <path d="M68 200.84V152 M118 154.04V191 M176 86.98V132 M228 58.68V98" />
         </g>
-        <g class="validation-figure__observations" fill="#006f78">
+        <g class="validation-figure__observations">
           <circle cx="29" cy="196" r="3" /><circle cx="35" cy="218" r="3" />
           <circle cx="42" cy="177" r="3" /><circle cx="49" cy="201" r="3" />
           <circle cx="54" cy="164" r="3" /><circle cx="61" cy="222" r="3" />
@@ -176,7 +176,7 @@
   </div>
 </section>
 
-<div class="evidence-strip" aria-label="How we work">
+<div class="evidence-strip" role="group" aria-label="How we work">
   <div class="evidence-strip__inner">
     <div class="evidence-strip__item"><strong>Independent evaluation</strong><span>Testing models with data that were not used to build them</span></div>
     <div class="evidence-strip__item"><strong>Longitudinal context</strong><span>Linking genomics with health records and patient reports</span></div>
@@ -239,10 +239,15 @@
       </div>
     </div>
     <div class="feature-panel__visual feature-panel__visual--study">
-      <picture>
-        <source media="(max-width: 40rem)" srcset="/assets/images/programs/precision-mental-health-mobile.svg" width="400" height="600" />
-        <img src="/assets/images/programs/precision-mental-health.svg" alt="Conceptual study design combining genetic data, clinical and treatment history, and patient reports to study mental health treatment response over time. Trajectories are illustrative. Models are tested in a separate dataset when suitable data are available." width="720" height="480" loading="lazy" />
-      </picture>
+      <picture class="theme-image theme-image--light">
+  <source media="(max-width: 40rem)" srcset="/assets/images/programs/precision-mental-health-mobile.svg" width="400" height="600" />
+  <img src="/assets/images/programs/precision-mental-health.svg" alt="Conceptual study design combining genetic data, clinical and treatment history, and patient reports to study mental health treatment response over time. Trajectories are illustrative. Models are tested in a separate dataset when suitable data are available." width="720" height="480" loading="lazy" />
+</picture>
+<picture class="theme-image theme-image--dark">
+  <source media="(max-width: 40rem)" srcset="/assets/images/programs/precision-mental-health-mobile.svg#dark" width="400" height="600" />
+  <img src="/assets/images/programs/precision-mental-health.svg#dark" alt="Conceptual study design combining genetic data, clinical and treatment history, and patient reports to study mental health treatment response over time. Trajectories are illustrative. Models are tested in a separate dataset when suitable data are available." width="720" height="480" loading="lazy" />
+</picture>
+
     </div>
   </div>
 </section>
@@ -256,10 +261,34 @@
       <p class="eyebrow">PRSweb Research Portals</p>
       <h2>Scores, comparisons, and source files in one place</h2>
       <p>Each release includes performance results, phenome-wide associations, phenotype mappings, methods, and downloadable score files.</p>
-      <div class="button-row">
-        <a class="button button--primary" href="/tools/prsweb/">View PRSweb releases</a>
-        <a class="button button--secondary" href="https://csg.sph.umich.edu/larsf/">Open PRSweb <span aria-hidden="true">↗</span></a>
-      </div>
+      
+      
+<div class="resource-access">
+  <div class="button-row">
+    <a class="button button--primary" href="https://csg.sph.umich.edu/larsf/">Open PRSweb <span aria-hidden="true">↗</span></a>
+    <a class="button button--secondary" href="/tools/prsweb/" aria-label="Resource details: PRSweb Research Portals">Resource details</a>
+    
+  </div>
+  
+  
+  
+    <div class="resource-release-links">
+      <p>Open an archived portal</p>
+      <ul><li><a href="https://csg.sph.umich.edu/larsf/skincancerprsweb/">Skin Cancer PRSweb (2019) <span aria-hidden="true">↗</span></a></li>
+      
+    
+      
+      
+        <li><a href="https://csg.sph.umich.edu/larsf/cancerprsweb/">Cancer PRSweb (2020) <span aria-hidden="true">↗</span></a></li>
+      
+    
+      
+      
+        <li><a href="https://csg.sph.umich.edu/larsf/exprsweb/">ExPRSweb (2021) <span aria-hidden="true">↗</span></a></li></ul>
+    </div>
+  
+</div>
+
     </div>
     <div class="feature-panel__visual">
       <img src="/assets/images/resources/prsweb-portal.png" alt="The public PRSweb landing page with trait search and cards for the three archived releases." width="1440" height="1000" loading="lazy" />
@@ -275,48 +304,92 @@
   
   <div class="card-grid card-grid--two">
     
-<article class="lab-card lab-card--linked resource-card accent-teal" id="resource-phewasflow">
+<article class="lab-card resource-card accent-teal" id="resource-phewasflow">
   <div class="card-heading-row">
     <p class="card-kicker">PheWAS software</p>
     
   </div>
-  <h3><a class="card-primary-link" href="/tools/phewasflow/">phewasFlow <span class="card-link-arrow" aria-hidden="true">→</span></a></h3>
+  <h3>phewasFlow</h3>
   <p class="card-summary">An R package for reproducible phenome-wide association studies in both directions, with local and cluster workflows, multiple-testing correction, and Manhattan and volcano plots.</p>
   
-  <p class="card-meta"><strong>View resource details</strong></p>
+  
+<div class="resource-access">
+  <div class="button-row">
+    <a class="button button--primary" href="https://github.com/FritscheLab/phewasFlow">View phewasFlow on GitHub <span aria-hidden="true">↗</span></a>
+    <a class="button button--secondary" href="/tools/phewasflow/" aria-label="Resource details: phewasFlow">Resource details</a>
+    
+  </div>
+  
+  
+  
+</div>
+
 </article>
 
-<article class="lab-card lab-card--linked resource-card accent-maize" id="resource-slurm-playbook">
+<article class="lab-card resource-card accent-maize" id="resource-slurm-playbook">
   <div class="card-heading-row">
     <p class="card-kicker">Research computing guide</p>
     
   </div>
-  <h3><a class="card-primary-link" href="/tools/slurm-playbook/">Fritsche Lab SLURM Playbook <span class="card-link-arrow" aria-hidden="true">→</span></a></h3>
+  <h3>Fritsche Lab SLURM Playbook</h3>
   <p class="card-summary">The SLURM Playbook covers submitting and monitoring CPU jobs and job arrays on U-M clusters, diagnosing failures, and rerunning only failed tasks.</p>
   
-  <p class="card-meta"><strong>View resource details</strong></p>
+  
+<div class="resource-access">
+  <div class="button-row">
+    <a class="button button--primary" href="https://fritschelab.org/slurm-playbook/">Open the SLURM Playbook <span aria-hidden="true">↗</span></a>
+    <a class="button button--secondary" href="/tools/slurm-playbook/" aria-label="Resource details: Fritsche Lab SLURM Playbook">Resource details</a>
+    
+  </div>
+  
+  
+  
+</div>
+
 </article>
 
-<article class="lab-card lab-card--linked resource-card accent-teal" id="resource-practical-genai-coding-guide">
+<article class="lab-card resource-card accent-teal" id="resource-practical-genai-coding-guide">
   <div class="card-heading-row">
     <p class="card-kicker">Practical GenAI · Part 1</p>
     
   </div>
-  <h3><a class="card-primary-link" href="/tools/practical-genai/">Practical GenAI Coding Guide <span class="card-link-arrow" aria-hidden="true">→</span></a></h3>
+  <h3>Practical GenAI Coding Guide</h3>
   <p class="card-summary">An eight-step workflow for AI-assisted research code, covering planning, prompting, review, testing, version control, and documentation.</p>
   
-  <p class="card-meta"><strong>View resource details</strong></p>
+  
+<div class="resource-access">
+  <div class="button-row">
+    <a class="button button--primary" href="https://fritschelab.org/practical-genai-coding-guide/">Read the 8-step guide <span aria-hidden="true">↗</span></a>
+    <a class="button button--secondary" href="/tools/practical-genai/" aria-label="Resource details: Practical GenAI Coding Guide">Resource details</a>
+    
+  </div>
+  
+  
+  
+</div>
+
 </article>
 
-<article class="lab-card lab-card--linked resource-card accent-teal" id="resource-practical-genai-agentic-coding-guide">
+<article class="lab-card resource-card accent-teal" id="resource-practical-genai-agentic-coding-guide">
   <div class="card-heading-row">
     <p class="card-kicker">Practical GenAI · Part 2</p>
     
   </div>
-  <h3><a class="card-primary-link" href="/tools/practical-genai-agentic/">Practical GenAI Agentic Coding Guide <span class="card-link-arrow" aria-hidden="true">→</span></a></h3>
+  <h3>Practical GenAI Agentic Coding Guide</h3>
   <p class="card-summary">Six lessons for working with coding agents in a runnable research repository, from a task brief through implementation, testing, review, and handoff.</p>
   
-  <p class="card-meta"><strong>View resource details</strong></p>
+  
+<div class="resource-access">
+  <div class="button-row">
+    <a class="button button--primary" href="https://fritschelab.org/practical-genai-agentic-coding-guide/docs/quickstart.html">Start with the demo <span aria-hidden="true">↗</span></a>
+    <a class="button button--secondary" href="/tools/practical-genai-agentic/" aria-label="Resource details: Practical GenAI Agentic Coding Guide">Resource details</a>
+    
+  </div>
+  
+  
+  
+</div>
+
 </article>
 
   </div>
@@ -333,17 +406,17 @@
 
 
 <article class="publication-item" id="immune-checkpoint-thyroid-toxicity-prs-2026">
-  <div class="publication-year" aria-label="Published 2026">2026</div>
+  <div class="publication-year"><span class="visually-hidden">Published </span>2026</div>
   <div>
-    <h3>Polygenic risk scores for prediction of immune checkpoint inhibitor thyroid toxicity in diverse populations</h3>
+    <h3>Polygenic Risk Scores for Prediction of Immune Checkpoint Inhibitor Thyroid Toxicity in Diverse Populations</h3>
     
     
     <p class="publication-venue">Clinical Cancer Research</p>
     <p class="publication-significance"><strong>Why it matters:</strong> Treatment-related outcomes include adverse effects as well as benefits. In 4,289 veterans treated with checkpoint inhibitors, an updated hypothyroidism polygenic score predicted thyroiditis in both the non-Hispanic White and Black patient groups, but not in chemotherapy controls. The older score, which was derived from European-ancestry data, did not predict thyroiditis in the Black patient group. This shows why scores need to be validated in each population and treatment setting.</p>
     
     <div class="card-links">
-      <a href="https://doi.org/10.1158/1078-0432.CCR-26-0620" target="_blank" rel="noopener noreferrer" aria-label="DOI: Polygenic risk scores for prediction of immune checkpoint inhibitor thyroid toxicity in diverse populations">DOI</a>
-      <a href="https://pubmed.ncbi.nlm.nih.gov/42240401/" target="_blank" rel="noopener noreferrer" aria-label="PubMed: Polygenic risk scores for prediction of immune checkpoint inhibitor thyroid toxicity in diverse populations">PubMed</a>
+      <a href="https://doi.org/10.1158/1078-0432.CCR-26-0620" target="_blank" rel="noopener noreferrer" aria-label="DOI: Polygenic Risk Scores for Prediction of Immune Checkpoint Inhibitor Thyroid Toxicity in Diverse Populations">DOI</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/42240401/" target="_blank" rel="noopener noreferrer" aria-label="PubMed: Polygenic Risk Scores for Prediction of Immune Checkpoint Inhibitor Thyroid Toxicity in Diverse Populations">PubMed</a>
       
     </div>
   </div>
@@ -352,7 +425,7 @@
 
 
 <article class="publication-item" id="prostate-prs-clinical-utility-2025">
-  <div class="publication-year" aria-label="Published 2025">2025</div>
+  <div class="publication-year"><span class="visually-hidden">Published </span>2025</div>
   <div>
     <h3>Assessing the Clinical Utility of Published Prostate Cancer Polygenic Risk Scores in a Large Biobank Data Set</h3>
     
@@ -371,7 +444,7 @@
 
 
 <article class="publication-item" id="als-risk-prediction-2024">
-  <div class="publication-year" aria-label="Published 2024">2024</div>
+  <div class="publication-year"><span class="visually-hidden">Published </span>2024</div>
   <div>
     <h3>Improving prediction models of amyotrophic lateral sclerosis (ALS) using polygenic, pre-existing conditions, and survey-based risk scores in the UK Biobank</h3>
     
@@ -409,21 +482,24 @@
     
     
 <article class="news-card">
+  <p class="card-kicker"><time datetime="2026-06-08T00:00:00-04:00">June 2026</time> · Funding</p>
+  <h3><a href="/news/postoperative-depression-project-2026/">Studying depressive symptoms after surgery</a></h3>
+  <p class="card-summary">A two-year project aims to identify patients who may need additional support for depressive symptoms after surgery.</p>
+  
+</article>
+
+<article class="news-card">
   <p class="card-kicker"><time datetime="2026-06-08T00:00:00-04:00">June 2026</time> · Research story</p>
   <h3><a href="/news/compass-mental-health-care-2026/">U-M researchers aim to shorten the path to effective mental health care</a></h3>
-  <p class="card-summary">U-M Research explains how COMPASS studies differences in responses to mental health treatment.</p>
+  <p class="card-summary">COMPASS participants contribute repeated reports, genetic samples, and health record data to study why mental health treatment responses differ.</p>
+  
 </article>
 
 <article class="news-card">
-  <p class="card-kicker"><time datetime="2024-10-15T00:00:00-04:00">October 2024</time> · Video</p>
-  <h3><a href="/news/mgi-2024-lars-fritsche-video/">MGI 2024: Lars Fritsche</a></h3>
-  <p class="card-summary">In this U-M symposium talk, Lars Fritsche reviews a decade of EHR-linked genetics research, including PheWeb and PRSweb.</p>
-</article>
-
-<article class="news-card">
-  <p class="card-kicker"><time datetime="2024-07-09T00:00:00-04:00">July 2024</time> · Funding</p>
-  <h3><a href="/news/compass-grant-2024/">U-M announces NIMH-backed COMPASS precision mental health grant</a></h3>
-  <p class="card-summary">NIMH awarded $17.9 million to the COMPASS precision mental health collaboration.</p>
+  <p class="card-kicker"><time datetime="2024-12-04T00:00:00-05:00">December 2024</time> · Research story</p>
+  <h3><a href="/news/cancer-immunotherapy-outcomes-2024/">Comparing cancer immunotherapy outcomes in Black and white patients</a></h3>
+  <p class="card-summary">A study using Veterans Health Administration records compared survival and immune-related adverse events in Black and white patients receiving cancer immunotherapy.</p>
+  
 </article>
 
   </div>
@@ -466,6 +542,6 @@
   </div>
 </footer>
 
-    <script src="/assets/js/site.js?v=1788708613" defer></script>
+    <script src="/assets/js/site.js?v=1788726893" defer></script>
   </body>
 </html>

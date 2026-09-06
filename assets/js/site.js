@@ -1,6 +1,64 @@
 (function () {
   "use strict";
 
+  document.querySelectorAll("[data-author-byline]").forEach(function (byline, bylineIndex) {
+    const authors = Array.from(byline.querySelectorAll("[data-author-name]"));
+    if (authors.length <= 50) return;
+
+    // Keep edge consortium names alongside the first and last individuals.
+    const individuals = authors.filter(function (author) { return !author.hasAttribute("data-group-author"); });
+    const firstIndividualIndex = individuals.length ? authors.indexOf(individuals[0]) : authors.length - 1;
+    const lastIndividualIndex = individuals.length ? authors.indexOf(individuals[individuals.length - 1]) : 0;
+
+    const groups = [];
+    let start = null;
+    authors.forEach(function (author, index) {
+      const keep = index <= firstIndividualIndex || index >= lastIndividualIndex ||
+        author.hasAttribute("data-leading-author") || author.hasAttribute("data-team-author");
+      if (!keep && start === null) start = index;
+      if (keep && start !== null) {
+        // Leave short gaps visible instead of surrounding one or two names with controls.
+        if (index - start >= 3) groups.push({ start: start, end: index - 1 });
+        start = null;
+      }
+    });
+
+    groups.forEach(function (range, groupIndex) {
+      const count = range.end - range.start + 1;
+      const first = authors[range.start];
+      const last = authors[range.end];
+      const group = document.createElement("span");
+      group.id = "byline-authors-" + (bylineIndex + 1) + "-" + (groupIndex + 1);
+      group.setAttribute("data-author-group", "");
+      const toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "author-toggle";
+      toggle.setAttribute("aria-controls", group.id);
+
+      function setExpanded(expanded) {
+        group.hidden = !expanded;
+        toggle.setAttribute("aria-expanded", String(expanded));
+        toggle.textContent = (expanded ? "Hide " : "") + count + " authors";
+        toggle.setAttribute("aria-label", (expanded ? "Hide " : "Show ") + count +
+          " authors, positions " + (range.start + 1) + " to " + (range.end + 1));
+      }
+
+      toggle.addEventListener("click", function () {
+        setExpanded(toggle.getAttribute("aria-expanded") !== "true");
+      });
+      byline.insertBefore(toggle, first);
+      byline.insertBefore(group, first);
+      let node = first;
+      while (node) {
+        const next = node.nextSibling;
+        group.appendChild(node);
+        if (node === last) break;
+        node = next;
+      }
+      setExpanded(false);
+    });
+  });
+
   const logoNote = document.querySelector("[data-logo-note]");
   if (logoNote) {
     const logoLink = logoNote.querySelector(".site-brand");
