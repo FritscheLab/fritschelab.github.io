@@ -9,6 +9,8 @@
     loading: app.querySelector("[data-network-loading]"),
     empty: app.querySelector("[data-network-empty]"),
     error: app.querySelector("[data-network-error]"),
+    canvasError: app.querySelector("[data-network-canvas-error]"),
+    loadError: app.querySelector("[data-network-load-error]"),
     status: app.querySelector("[data-network-status]"),
     search: app.querySelector("[data-network-search]"),
     yearFrom: app.querySelector("[data-network-year-from]"),
@@ -1349,8 +1351,9 @@
 
   function showLoadError(error) {
     ui.loading.hidden = true;
+    ui.canvasError.hidden = true;
+    ui.loadError.hidden = false;
     ui.error.hidden = false;
-    ui.error.textContent = "The network could not be loaded. You can still browse the publication list or download the BibTeX file.";
     ui.graph.classList.add("is-empty");
     ui.status.textContent = "The interactive network is unavailable.";
     app.querySelectorAll("[data-network-controls] input, [data-network-controls] select, [data-network-controls] button")

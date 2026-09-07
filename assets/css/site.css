@@ -2823,6 +2823,7 @@ figure {
 .alumni-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
   gap: 1rem;
 }
 
@@ -2841,6 +2842,21 @@ figure {
 .alumni-card p {
   margin-bottom: 0.35rem;
   font-size: 0.86rem;
+}
+
+.alumni-publications {
+  margin-top: 0.75rem;
+  font-size: 0.86rem;
+}
+
+.alumni-publications summary {
+  color: var(--heading);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.alumni-publications .link-list {
+  margin-top: 0.75rem;
 }
 
 .site-footer {

@@ -29,7 +29,7 @@
 <link rel="icon" href="/assets/images/fritsche-lab-favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/atom+xml" title="Fritsche Lab updates" href="/feed.xml">
 <script src="/assets/js/theme.js"></script>
-<link rel="stylesheet" href="/assets/css/site.css?v=1788726893">
+<link rel="stylesheet" href="/assets/css/site.css?v=1788794440">
 
 <script type="application/ld+json">{  "@context": "https://schema.org",    "@type": "WebPage",  "name": "Research & Collaboration Network",  "description": "Explore collaborators, keywords, and research directions in an interactive map of the Fritsche Lab publication record.",  "url": "https://fritschelab.org/collaborations/",  "isPartOf": {"@type": "WebSite", "name": "Fritsche Lab", "url": "https://fritschelab.org"}  }</script>
 
@@ -92,7 +92,7 @@
   <div class="prose prose--wide">
     <div class="collaboration-app" data-collaboration-app="" data-network-url="/assets/data/collaboration-network.json" data-logo-url="/assets/images/fritsche-lab-network-mark.png" data-default-year-from="2012">
   <noscript>
-    <div class="notice"><p>This interactive network requires JavaScript. You can still browse the <a href="/publications/">publication list</a> or download the <a href="/data/publications.bib">BibTeX file</a>.</p></div>
+    <div class="notice"><p>This interactive network requires JavaScript. You can still browse the <a href="/publications/">publication list</a>.</p></div>
   </noscript>
 
   <section class="collaboration-overview" aria-labelledby="network-overview-title">
@@ -166,7 +166,10 @@
         <div id="collaboration-graph" class="collaboration-graph" role="img" tabindex="0" aria-label="Interactive publication network of collaborators, keywords, and research directions" aria-describedby="network-instructions" data-network-graph=""></div>
         <div class="collaboration-graph-message" data-network-loading="">Preparing the network…</div>
         <div class="collaboration-graph-message" data-network-empty="" hidden="">No connections match these filters. Try a wider year range, lower the minimum number of papers, or include papers with large author lists.</div>
-        <div class="collaboration-graph-message collaboration-graph-message--error" role="alert" data-network-error="" hidden="">The graph could not be displayed. You can still use the tables below.</div>
+        <div class="collaboration-graph-message collaboration-graph-message--error" role="alert" data-network-error="" hidden="">
+          <span data-network-canvas-error="">The graph could not be displayed. You can still use the tables below.</span>
+          <span data-network-load-error="" hidden="">The network could not be loaded. You can still browse the <a href="/publications/">publication list</a>.</span>
+        </div>
         <ul class="collaboration-legend" aria-label="Network legend">
           <li><span class="collaboration-legend__node collaboration-legend__node--focal" aria-hidden="true"></span>Fritsche Lab / Lars Fritsche</li>
           <li><span class="collaboration-legend__node collaboration-legend__node--collaborator" aria-hidden="true"></span>Collaborator</li>
@@ -240,7 +243,7 @@
       </div>
       <div>
         <h3>Data and software</h3>
-        <p>Download the <a href="/assets/data/collaboration-network.json">network data</a> and <a href="/data/publications.bib">bibliography</a> to explore the publication record. The interactive map uses Cytoscape.js under the <a href="/assets/vendor/cytoscape/LICENSE">MIT license</a>.</p>
+        <p>The interactive map uses Cytoscape.js under the <a href="/assets/vendor/cytoscape/LICENSE">MIT license</a>.</p>
       </div>
     </div>
   </section>
@@ -248,7 +251,7 @@
 
 <script src="/assets/vendor/cytoscape/cytoscape.min.js" defer=""></script>
 
-<script src="/assets/js/collaboration-network.js?v=1788726893" defer=""></script>
+<script src="/assets/js/collaboration-network.js?v=1788794440" defer=""></script>
 
 
   </div>
@@ -283,6 +286,6 @@
   </div>
 </footer>
 
-    <script src="/assets/js/site.js?v=1788726893" defer></script>
+    <script src="/assets/js/site.js?v=1788794440" defer></script>
   </body>
 </html>
