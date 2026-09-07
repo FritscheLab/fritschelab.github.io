@@ -1,0 +1,23 @@
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="compass-grant-news-title compass-grant-news-desc">
+  <title id="compass-grant-news-title">A shared question about treatment response</title>
+  <desc id="compass-grant-news-desc">Two groups of collaborators connect to a shared question mark. The COMPASS collaboration studies why mental health treatment responses differ. The people are conceptual symbols, not a count of investigators or participants, and no treatment benefit is shown.</desc>
+  <style>
+    :root:target { --canvas: #142536; --ink: #e8f1fa; --purple: #bca7e8; --soft: #302c46; --line: #8ba3b8; }
+    text { font-family: Inter, Arial, sans-serif; fill: var(--ink, #00274c); }
+  </style>
+  <defs>
+    <g id="compass-grant-collaborators" stroke="var(--ink, #00274c)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="17" cy="-21" r="15" fill="var(--canvas, #f7f8f6)"/>
+      <path d="M-7 44V20C-7-8 41-8 41 20V44Z" fill="var(--canvas, #f7f8f6)"/>
+      <circle cx="-15" cy="-7" r="18" fill="var(--soft, #f0ecf6)"/>
+      <path d="M-44 57V35C-44 3 14 3 14 35V57Z" fill="var(--soft, #f0ecf6)"/>
+    </g>
+  </defs>
+  <rect width="480" height="280" fill="var(--canvas, #f7f8f6)"/>
+  <path d="M135 127H182M298 127H345" fill="none" stroke="var(--line, #728895)" stroke-width="3"/>
+  <use href="#compass-grant-collaborators" transform="translate(92 121)"/>
+  <use href="#compass-grant-collaborators" transform="translate(389 121)"/>
+  <circle cx="240" cy="127" r="58" fill="var(--soft, #f0ecf6)" stroke="var(--purple, #6c5b9d)" stroke-width="3"/>
+  <text x="240" y="153" text-anchor="middle" font-size="76" font-weight="600">?</text>
+  <text x="240" y="242" text-anchor="middle" font-size="32" font-weight="600">Treatment response</text>
+</svg>

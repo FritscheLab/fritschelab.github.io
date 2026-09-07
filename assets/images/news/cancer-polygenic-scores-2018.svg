@@ -1,0 +1,37 @@
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="news-mgi-cancer-title news-mgi-cancer-desc">
+  <title id="news-mgi-cancer-title">Cancer polygenic scores linked with diagnoses in MGI</title>
+  <desc id="news-mgi-cancer-desc">A weighted genetic score is connected to a clinical diagnosis record labeled MGI, the Michigan Genomics Initiative. The neutral line represents testing for associations, not a causal effect. The study included participants of recent European ancestry. The score marks and record are conceptual and do not show participant data or predictive performance.</desc>
+  <style>
+    :root:target {
+      --canvas: #142536; --ink: #e8f1fa; --line: #8ba3b8; --border: #344b60;
+      --teal: #6dcac3; --teal-soft: #163d41; --blue: #85b8e6; --blue-soft: #1b3248;
+      --purple: #bca7e8; --rust: #e7a38a; --rust-soft: #422f2c;
+    }
+    text { font-family: Inter, Arial, sans-serif; font-size: 28px; font-weight: 600; fill: var(--ink, #00274c); text-anchor: middle; }
+    .line { fill: none; stroke: var(--line, #728895); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <defs>
+    
+    <g id="news-mgi-cancer-score" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M-76 10H26" stroke="var(--line, #728895)"/>
+      <path d="M-66 10V-10M-46 10V-26M-26 10V26M-6 10V-18M14 10V-2" stroke="var(--teal, #006f78)"/>
+      <g fill="var(--teal-soft, #eaf2f2)" stroke="var(--teal, #006f78)">
+        <circle cx="-66" cy="-10" r="4"/><circle cx="-46" cy="-26" r="4"/>
+        <circle cx="-26" cy="26" r="4"/><circle cx="-6" cy="-18" r="4"/><circle cx="14" cy="-2" r="4"/>
+      </g>
+      <path d="M35 10H45m-5-4 5 4-5 4" stroke="var(--line, #728895)"/>
+      <rect x="53" y="-9" width="35" height="38" rx="5" fill="var(--teal-soft, #eaf2f2)" stroke="var(--teal, #006f78)"/>
+      <path d="M79 0H62l9 10-9 10h17" stroke="var(--ink, #00274c)"/>
+    </g>
+  </defs>
+  <rect width="480" height="280" fill="var(--canvas, #f7f8f6)"/>
+  <use href="#news-mgi-cancer-score" transform="translate(120 118) scale(1.08)"/>
+  <path class="line" d="M230 130H279" stroke-dasharray="5 7"/>
+  <g stroke="var(--blue, #346aa0)" stroke-width="3" stroke-linejoin="round">
+    <path d="M307 59H391L418 86V205H307Z" fill="var(--blue-soft, #eaf2f8)"/>
+    <path d="M391 59V86H418M329 136H397M329 159H387M329 182H397" fill="none" stroke-linecap="round"/>
+  </g>
+  <text x="362" y="117">MGI</text>
+  <text x="125" y="252">Polygenic score</text>
+  <text x="363" y="252">Diagnoses</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="news-india-modeling-title news-india-modeling-desc">
+  <title id="news-india-modeling-title">COVID-19 intervention scenarios in India</title>
+  <desc id="news-india-modeling-desc">A virus symbol connects to two equal branches labeled Scenario A and Scenario B. This conceptual illustration represents comparing intervention scenarios for COVID-19 in India; the branches do not show predictions, observed outcomes, or a ranking of interventions.</desc>
+  <style>
+    :root:target {
+      --figure-canvas: #142536;
+      --figure-ink: #e8f1fa;
+      --figure-teal: #6dcac3;
+      --figure-blue: #85b8e6;
+      --figure-supporting: #a7b8c8;
+      --figure-border: #344b60;
+      --figure-soft: #192d40;
+    }
+  </style>
+  <rect width="480" height="280" fill="var(--figure-canvas, #f7f8f6)"/>
+  <text x="38" y="61" fill="var(--figure-ink, #00274c)" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="600">India</text>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="M133 161h52m0 0c30 0 32-49 62-49h22m-84 49c30 0 32 49 62 49h22" stroke="var(--figure-supporting, #52606d)"/>
+    <circle cx="87" cy="161" r="31" fill="var(--figure-soft, #eaf2f2)" stroke="var(--figure-teal, #006f78)"/>
+    <g stroke="var(--figure-teal, #006f78)">
+      <path d="M87 130v-12m-6 0h12M87 192v12m-6 0h12M56 161H44m0-6v12M118 161h12m0-6v12M65 139l-9-9m-4 4 8-8M109 183l9 9m-4 4 8-8M109 139l9-9m-4-4 8 8M65 183l-9 9m-4-4 8 8"/>
+      <circle cx="78" cy="153" r="4"/><circle cx="97" cy="167" r="4"/>
+    </g>
+    <rect x="269" y="82" width="177" height="60" rx="9" fill="var(--figure-soft, #eaf2f2)" stroke="var(--figure-teal, #006f78)"/>
+    <rect x="269" y="180" width="177" height="60" rx="9" fill="var(--figure-soft, #eaf2f2)" stroke="var(--figure-teal, #006f78)"/>
+  </g>
+  <circle cx="185" cy="161" r="4.5" fill="var(--figure-supporting, #52606d)"/>
+  <g fill="var(--figure-ink, #00274c)" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600" text-anchor="middle">
+    <text x="357.5" y="122">Scenario A</text>
+    <text x="357.5" y="220">Scenario B</text>
+  </g>
+</svg>

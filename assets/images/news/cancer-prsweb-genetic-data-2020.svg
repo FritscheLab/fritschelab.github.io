@@ -1,0 +1,36 @@
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="news-prsweb-title news-prsweb-desc">
+  <title id="news-prsweb-title">Public cancer score results in PRSweb</title>
+  <desc id="news-prsweb-desc">A browser window contains equal columns for the Michigan Genomics Initiative and UK Biobank, with a download symbol for public score files. This conceptual illustration represents the Cancer PRSweb resource, not participant-level data or measured results.</desc>
+  <style>
+    :root:target {
+      --figure-canvas: #142536;
+      --figure-ink: #e8f1fa;
+      --figure-teal: #6dcac3;
+      --figure-blue: #85b8e6;
+      --figure-supporting: #a7b8c8;
+      --figure-border: #344b60;
+      --figure-soft: #192d40;
+    }
+  </style>
+  <rect width="480" height="280" fill="var(--figure-canvas, #f7f8f6)"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="30" y="28" width="420" height="224" rx="12" stroke="var(--figure-ink, #00274c)" stroke-width="3"/>
+    <path d="M30 82h420" stroke="var(--figure-border, #ccd5d5)" stroke-width="2"/>
+    <path d="M240 108v87" stroke="var(--figure-border, #ccd5d5)" stroke-width="2"/>
+    <g stroke="var(--figure-teal, #006f78)" stroke-width="3">
+      <path d="M66 151h24m16 0h86M66 174h24m16 0h86"/>
+    </g>
+    <g stroke="var(--figure-blue, #346aa0)" stroke-width="3">
+      <path d="M286 151h24m16 0h86M286 174h24m16 0h86"/>
+    </g>
+    <path d="M240 202v28m-11-11 11 11 11-11M219 228v10h42v-10" stroke="var(--figure-teal, #006f78)" stroke-width="3"/>
+  </g>
+  <g fill="var(--figure-supporting, #52606d)">
+    <circle cx="391" cy="56" r="3"/><circle cx="405" cy="56" r="3"/><circle cx="419" cy="56" r="3"/>
+  </g>
+  <g fill="var(--figure-ink, #00274c)" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="600">
+    <text x="54" y="66">PRSweb</text>
+    <text x="130" y="128" text-anchor="middle">MGI</text>
+    <text x="350" y="128" text-anchor="middle">UKB</text>
+  </g>
+</svg>

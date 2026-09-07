@@ -1,0 +1,31 @@
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="news-long-covid-title news-long-covid-desc">
+  <title id="news-long-covid-title">Bringing together studies of long COVID</title>
+  <desc id="news-long-covid-desc">Two study documents flank a globe, connected by short lines. This conceptual illustration represents combining evidence on long COVID from studies across regions. It does not show study locations, counts, or prevalence estimates.</desc>
+  <style>
+    :root:target {
+      --figure-canvas: #142536;
+      --figure-ink: #e8f1fa;
+      --figure-teal: #6dcac3;
+      --figure-blue: #85b8e6;
+      --figure-supporting: #a7b8c8;
+      --figure-border: #344b60;
+      --figure-soft: #192d40;
+    }
+  </style>
+  <rect width="480" height="280" fill="var(--figure-canvas, #f7f8f6)"/>
+  <text x="240" y="55" fill="var(--figure-ink, #00274c)" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="600" text-anchor="middle">Long COVID</text>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="M130 161h43m134 0h43" stroke="var(--figure-supporting, #52606d)"/>
+    <g stroke="var(--figure-blue, #346aa0)">
+      <path d="M36 105h72l22 22v90H36Z" fill="var(--figure-canvas, #f7f8f6)"/>
+      <path d="M108 105v22h22M54 145h39M54 166h57M54 187h46"/>
+      <path d="M350 105h72l22 22v90h-94Z" fill="var(--figure-canvas, #f7f8f6)"/>
+      <path d="M422 105v22h22M368 145h39M368 166h57M368 187h46"/>
+    </g>
+    <g stroke="var(--figure-teal, #006f78)">
+      <circle cx="240" cy="161" r="67" fill="var(--figure-soft, #eaf2f2)"/>
+      <ellipse cx="240" cy="161" rx="28" ry="67"/>
+      <path d="M173 161h134M183 126q57 19 114 0M183 196q57-19 114 0"/>
+    </g>
+  </g>
+</svg>

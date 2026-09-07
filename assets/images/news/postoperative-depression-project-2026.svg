@@ -1,0 +1,22 @@
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="postoperative-news-title postoperative-news-desc">
+  <title id="postoperative-news-title">The six months after surgery</title>
+  <desc id="postoperative-news-desc">A hospital bed leads to a calendar marked six months. The conceptual illustration identifies the period in which researchers will study depressive symptoms after surgery. It does not show symptom measurements or scheduled visits.</desc>
+  <style>
+    :root:target { --canvas: #142536; --ink: #e8f1fa; --teal: #6dcac3; --soft: #193a40; --line: #8ba3b8; }
+    text { font-family: Inter, Arial, sans-serif; fill: var(--ink, #00274c); }
+  </style>
+  <rect width="480" height="280" fill="var(--canvas, #f7f8f6)"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="M53 164V103M53 155H179V183M53 183V155" stroke="var(--ink, #00274c)"/>
+    <circle cx="81" cy="121" r="13" fill="var(--soft, #eaf2f2)" stroke="var(--ink, #00274c)"/>
+    <path d="M100 112H149Q177 112 177 145H57V136H98Z" fill="var(--soft, #eaf2f2)" stroke="var(--teal, #006f78)"/>
+    <path d="M126 104V61H160M148 61L140 82H181L173 61" stroke="var(--ink, #00274c)"/>
+    <path d="M207 131H259M250 122L259 131L250 140" stroke="var(--line, #728895)"/>
+    <rect x="287" y="65" width="142" height="121" rx="9" fill="var(--soft, #eaf2f2)" stroke="var(--teal, #006f78)"/>
+    <path d="M287 94H429M320 53V76M396 53V76" stroke="var(--teal, #006f78)"/>
+  </g>
+  <text x="358" y="139" text-anchor="middle" font-size="43" font-weight="600">6</text>
+  <text x="358" y="172" text-anchor="middle" font-size="28">months</text>
+  <text x="117" y="237" text-anchor="middle" font-size="30" font-weight="600">Surgery</text>
+  <text x="358" y="237" text-anchor="middle" font-size="30" font-weight="600">Follow-up</text>
+</svg>

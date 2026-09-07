@@ -1,0 +1,20 @@
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="immunotherapy-news-title immunotherapy-news-desc">
+  <title id="immunotherapy-news-title">Immunotherapy treatment outcomes</title>
+  <desc id="immunotherapy-news-desc">A clock represents survival follow-up and a clinical note represents side effects, the two types of treatment outcomes examined using Veterans Health Administration records. This conceptual illustration depicts no patient groups, measured durations, outcome differences, or genetic explanation.</desc>
+  <style>
+    :root:target { --canvas: #142536; --ink: #e8f1fa; --blue: #85b8e6; --soft: #1b3248; --line: #8ba3b8; }
+    text { font-family: Inter, Arial, sans-serif; fill: var(--ink, #00274c); }
+  </style>
+  <rect width="480" height="280" fill="var(--canvas, #f7f8f6)"/>
+  <text x="240" y="51" text-anchor="middle" font-size="32" font-weight="600">Treatment outcomes</text>
+  <g stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="132" cy="148" r="52" fill="var(--soft, #eaf2f8)" stroke="var(--ink, #00274c)"/>
+    <path d="M132 117V148H159" fill="none" stroke="var(--blue, #346aa0)"/>
+    <path d="M304 94H362L390 122V202H304ZM362 94V122H390" fill="var(--soft, #eaf2f8)" stroke="var(--ink, #00274c)"/>
+    <path d="M323 146H370M323 166H370M323 186H353" fill="none" stroke="var(--blue, #346aa0)"/>
+  </g>
+  <g text-anchor="middle" font-size="30" font-weight="600">
+    <text x="132" y="251">Survival</text>
+    <text x="347" y="251">Side effects</text>
+  </g>
+</svg>

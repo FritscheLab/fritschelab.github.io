@@ -1,0 +1,42 @@
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="news-cross-ancestry-title news-cross-ancestry-desc">
+  <title id="news-cross-ancestry-title">Cancer scores evaluated across ancestry groups in UK Biobank</title>
+  <desc id="news-cross-ancestry-desc">Two equal panels repeat exactly the same weighted genetic score above identical participant symbols, representing evaluation across ancestry groups in UK Biobank. Panel size and participant symbols do not represent group counts, ancestry categories, or equal performance. The study scaled scores within groups. Conceptual illustration, not study results.</desc>
+  <style>
+    :root:target {
+      --canvas: #142536; --ink: #e8f1fa; --line: #8ba3b8; --border: #344b60;
+      --teal: #6dcac3; --teal-soft: #163d41; --blue: #85b8e6; --blue-soft: #1b3248;
+      --purple: #bca7e8; --rust: #e7a38a; --rust-soft: #422f2c;
+    }
+    text { font-family: Inter, Arial, sans-serif; font-size: 28px; font-weight: 600; fill: var(--ink, #00274c); text-anchor: middle; }
+    .line { fill: none; stroke: var(--line, #728895); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <defs>
+    
+    <g id="news-cross-ancestry-score" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+      <path d="M-76 10H26" stroke="var(--line, #728895)"/>
+      <path d="M-66 10V-10M-46 10V-26M-26 10V26M-6 10V-18M14 10V-2" stroke="var(--teal, #006f78)"/>
+      <g fill="var(--teal-soft, #eaf2f2)" stroke="var(--teal, #006f78)">
+        <circle cx="-66" cy="-10" r="4"/><circle cx="-46" cy="-26" r="4"/>
+        <circle cx="-26" cy="26" r="4"/><circle cx="-6" cy="-18" r="4"/><circle cx="14" cy="-2" r="4"/>
+      </g>
+      <path d="M35 10H45m-5-4 5 4-5 4" stroke="var(--line, #728895)"/>
+      <rect x="53" y="-9" width="35" height="38" rx="5" fill="var(--teal-soft, #eaf2f2)" stroke="var(--teal, #006f78)"/>
+      <path d="M79 0H62l9 10-9 10h17" stroke="var(--ink, #00274c)"/>
+    </g>
+    <g id="news-cross-ancestry-participants" fill="none" stroke="var(--ink, #00274c)" stroke-width="3" stroke-linecap="round">
+      <circle cx="-28" cy="-10" r="8"/><circle cy="-10" r="8"/><circle cx="28" cy="-10" r="8"/>
+      <path d="M-39 19V13Q-39 2-28 2T-17 13V19M-11 19V13Q-11 2 0 2T11 13V19M17 19V13Q17 2 28 2T39 13V19"/>
+    </g>
+  </defs>
+  <rect width="480" height="280" fill="var(--canvas, #f7f8f6)"/>
+  <text x="240" y="43">UK Biobank</text>
+  <g fill="none" stroke="var(--border, #ccd5d5)" stroke-width="2">
+    <rect x="30" y="68" width="200" height="145" rx="8"/>
+    <rect x="250" y="68" width="200" height="145" rx="8"/>
+  </g>
+  <use href="#news-cross-ancestry-score" transform="translate(124 112)"/>
+  <use href="#news-cross-ancestry-score" transform="translate(344 112)"/>
+  <use href="#news-cross-ancestry-participants" transform="translate(130 177)"/>
+  <use href="#news-cross-ancestry-participants" transform="translate(350 177)"/>
+  <text x="240" y="255">Across ancestry groups</text>
+</svg>

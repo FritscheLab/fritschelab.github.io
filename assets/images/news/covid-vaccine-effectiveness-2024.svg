@@ -1,0 +1,30 @@
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="news-booster-methods-title news-booster-methods-desc">
+  <title id="news-booster-methods-title">Comparing methods with the same patient records</title>
+  <desc id="news-booster-methods-desc">One stack of patient records connects to two equal panels labeled Design A and Design B. This conceptual illustration represents comparing observational study methods for COVID-19 booster effectiveness using the same data. It does not depict efficacy estimates or rank the methods.</desc>
+  <style>
+    :root:target {
+      --figure-canvas: #142536;
+      --figure-ink: #e8f1fa;
+      --figure-teal: #6dcac3;
+      --figure-blue: #85b8e6;
+      --figure-supporting: #a7b8c8;
+      --figure-border: #344b60;
+      --figure-soft: #192d40;
+    }
+  </style>
+  <rect width="480" height="280" fill="var(--figure-canvas, #f7f8f6)"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="M240 152v13m0 0h-121q-8 0-8 8v18m129-26h121q8 0 8 8v18" stroke="var(--figure-supporting, #52606d)"/>
+    <path d="M211 83h53v61h-53Z" fill="var(--figure-canvas, #f7f8f6)" stroke="var(--figure-border, #ccd5d5)"/>
+    <path d="M221 73h42l12 12v59h-54Z" fill="var(--figure-canvas, #f7f8f6)" stroke="var(--figure-blue, #346aa0)"/>
+    <path d="M263 73v12h12M234 104h27M234 117h27M234 130h18" stroke="var(--figure-blue, #346aa0)"/>
+    <rect x="29" y="191" width="164" height="61" rx="9" fill="var(--figure-soft, #eaf2f2)" stroke="var(--figure-teal, #006f78)"/>
+    <rect x="287" y="191" width="164" height="61" rx="9" fill="var(--figure-soft, #eaf2f2)" stroke="var(--figure-teal, #006f78)"/>
+  </g>
+  <circle cx="240" cy="165" r="4.5" fill="var(--figure-supporting, #52606d)"/>
+  <g fill="var(--figure-ink, #00274c)" font-family="Inter, Arial, sans-serif" font-weight="600" text-anchor="middle">
+    <text x="240" y="52" font-size="32">Same records</text>
+    <text x="111" y="232" font-size="28">Design A</text>
+    <text x="369" y="232" font-size="28">Design B</text>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="mgi-talk-news-title mgi-talk-news-desc">
+  <title id="mgi-talk-news-title">Genetics linked to health records</title>
+  <desc id="mgi-talk-news-desc">A DNA helix connects without an arrow to a health record, with a small play symbol indicating a symposium video. The talk explores how research phenotypes from electronic health records are connected with genetic data. Conceptual illustration, not participant data or measured results.</desc>
+  <style>
+    :root:target { --canvas: #142536; --ink: #e8f1fa; --teal: #6dcac3; --blue: #85b8e6; --soft: #1b3248; --line: #8ba3b8; }
+    text { font-family: Inter, Arial, sans-serif; fill: var(--ink, #00274c); }
+  </style>
+  <rect width="480" height="280" fill="var(--canvas, #f7f8f6)"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <g transform="translate(101 59) scale(1.4)" stroke-width="2.143">
+      <path d="M1.652 4H38.348M12.457 12H27.543M12.457 20H27.543M1.652 28H38.348M1.652 36H38.348M12.457 44H27.543M12.457 52H27.543M1.652 60H38.348M1.652 68H38.348M12.457 76H27.543M12.457 84H27.543M1.652 92H38.348" stroke="var(--teal, #006f78)"/>
+      <path d="M0 0C0 5.333 9.528 10.667 20 16C30.472 21.333 40 26.667 40 32C40 37.333 30.472 42.667 20 48C9.528 53.333 0 58.667 0 64C0 69.333 9.528 74.667 20 80C30.472 85.333 40 90.667 40 96M40 0C40 5.333 30.472 10.667 20 16C9.528 21.333 0 26.667 0 32C0 37.333 9.528 42.667 20 48C30.472 53.333 40 58.667 40 64C40 69.333 30.472 74.667 20 80C9.528 85.333 0 90.667 0 96" stroke="var(--ink, #00274c)"/>
+    </g>
+    <path d="M179 126H279" stroke="var(--line, #728895)"/>
+    <circle cx="229" cy="126" r="9" fill="var(--canvas, #f7f8f6)" stroke="var(--teal, #006f78)"/>
+    <path d="M300 61H357L386 90V192H300ZM357 61V90H386" fill="var(--soft, #eaf2f8)" stroke="var(--blue, #346aa0)"/>
+    <path d="M319 118H366M319 140H366M319 162H349" stroke="var(--blue, #346aa0)"/>
+    <circle cx="428" cy="44" r="20" stroke="var(--ink, #00274c)"/>
+  </g>
+  <path d="M423 35L437 44L423 53Z" fill="var(--ink, #00274c)"/>
+  <g text-anchor="middle" font-size="30" font-weight="600">
+    <text x="129" y="243">Genetics</text>
+    <text x="344" y="243">Health records</text>
+  </g>
+</svg>
