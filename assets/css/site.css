@@ -949,6 +949,37 @@ figure {
   flex-direction: column;
 }
 
+.resource-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.resource-name > span {
+  min-width: 0;
+}
+
+.resource-icon {
+  display: block;
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 25%;
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.resource-card h3 .resource-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.resource-hero h1 .resource-icon {
+  width: clamp(2.5rem, 1em, 3.5rem);
+  height: clamp(2.5rem, 1em, 3.5rem);
+}
+
 .resource-card .resource-access {
   margin-top: auto;
 }

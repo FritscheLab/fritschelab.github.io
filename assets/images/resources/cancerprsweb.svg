@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  
+  <title id="title">Cancer PRSweb favicon</title>
+  <rect width="64" height="64" rx="16" fill="#00274c"/>
+  
+  <defs>
+    <mask id="maizeCurveMask">
+      <rect width="64" height="64" fill="white"/>
+      <path d="M 18 52 C 26 52, 28 28, 38 28 C 48 28, 50 52, 58 52 Z" fill="black"/>
+    </mask>
+  </defs>
+  <path d="M 4 52 C 14 52, 13 22, 23 22 C 33 22, 33 52, 44 52 Z" fill="#ffffff" mask="url(#maizeCurveMask)"/>
+  <path d="M 18 52 C 26 52, 28 28, 38 28 C 48 28, 50 52, 58 52 Z" fill="#ffcb05"/>
+  
+  <text x="58" y="17" fill="#ffffff" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" letter-spacing=".08em" text-anchor="end">CA</text>
+</svg>
