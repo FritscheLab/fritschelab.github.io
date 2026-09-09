@@ -1222,6 +1222,7 @@ figure {
 .feature-panel__visual img {
   width: 100%;
   max-height: 23rem;
+  object-fit: contain;
 }
 
 .feature-panel__visual--study {
@@ -2816,11 +2817,13 @@ figure {
 .alumni-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: start;
+  align-items: stretch;
   gap: 1rem;
 }
 
 .alumni-card {
+  display: flex;
+  flex-direction: column;
   padding: 1.1rem;
   border-left: 4px solid var(--blue);
   background: var(--soft);
@@ -2838,7 +2841,8 @@ figure {
 }
 
 .alumni-publications {
-  margin-top: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
   font-size: 0.86rem;
 }
 
