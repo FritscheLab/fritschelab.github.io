@@ -277,7 +277,6 @@
 
   function matchesSearchToken(indexedTokens, queryToken) {
     if (indexedTokens.has(queryToken)) return true;
-    if (queryToken.length < 4) return false;
 
     return Array.from(indexedTokens).some(function (indexedToken) {
       return indexedToken.startsWith(queryToken);

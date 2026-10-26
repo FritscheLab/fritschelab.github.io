@@ -1,0 +1,38 @@
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="psyprsweb-news-title psyprsweb-news-desc">
+  <title id="psyprsweb-news-title">Comparing polygenic scores across biobanks</title>
+  <desc id="psyprsweb-news-desc">Stacked score sheets are connected without an arrow to two equally sized biobank symbols. The conceptual illustration represents evaluating mental-health polygenic scores across cohorts. It does not show score values, differences in predictive performance, or a clinical tool.</desc>
+  <style>
+    :root:target { --canvas: #142536; --ink: #e8f1fa; --teal: #6dcac3; --blue: #85b8e6; --purple: #bca7e8; --soft: #193a40; --line: #8ba3b8; }
+    text { font-family: Inter, Arial, sans-serif; fill: var(--ink, #00274c); }
+  </style>
+  <rect width="480" height="280" fill="var(--canvas, #f7f8f6)"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <g fill="var(--soft, #eaf2f2)" stroke="var(--teal, #006f78)">
+      <rect x="73" y="51" width="130" height="106" rx="7"/>
+      <rect x="59" y="66" width="130" height="106" rx="7"/>
+      <rect x="45" y="81" width="130" height="106" rx="7"/>
+    </g>
+    <g stroke="var(--ink, #00274c)">
+      <circle cx="69" cy="106" r="4"/>
+      <circle cx="69" cy="134" r="4"/>
+      <circle cx="69" cy="162" r="4"/>
+      <path d="M88 106H151M88 134H151M88 162H151"/>
+    </g>
+    <path d="M221 121H268" stroke="var(--line, #728895)"/>
+    <g fill="var(--soft, #eaf2f2)" stroke="var(--blue, #346aa0)">
+      <rect x="288" y="72" width="62" height="109" rx="7"/>
+      <rect x="367" y="72" width="62" height="109" rx="7"/>
+      <path d="M288 99H350M367 99H429"/>
+    </g>
+    <g stroke="var(--purple, #6c5b9d)">
+      <circle cx="319" cy="123" r="10"/>
+      <path d="M300 161C300 139 338 139 338 161M300 161H338"/>
+      <circle cx="398" cy="123" r="10"/>
+      <path d="M379 161C379 139 417 139 417 161M379 161H417"/>
+    </g>
+  </g>
+  <g text-anchor="middle" font-size="30" font-weight="600">
+    <text x="122" y="242">Scores</text>
+    <text x="359" y="242">Evaluation</text>
+  </g>
+</svg>
