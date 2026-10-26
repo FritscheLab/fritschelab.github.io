@@ -42,6 +42,8 @@
     focalId: null,
     currentElements: [],
     currentPublicationIds: new Set(),
+    currentClusters: [],
+    queryMatchLabels: new Map(),
     currentView: "directions"
   };
   let cy = null;
@@ -372,10 +374,32 @@
   }
 
   function eligiblePublications(filters) {
+    model.queryMatchLabels.clear();
+    if (filters.query) {
+      model.authorNodes.concat(model.directionNodes, model.keywordNodes).forEach(function (node) {
+        const label = node.data.isFocal ? "Fritsche Lab / Lars Fritsche" : node.data.label;
+        if (label.toLocaleLowerCase().includes(filters.query)) {
+          node.data.publicationIds.forEach(function (id) {
+            const labels = model.queryMatchLabels.get(id) || [];
+            if (!labels.includes(label)) labels.push(label);
+            model.queryMatchLabels.set(id, labels);
+          });
+        }
+      });
+    }
+
     const ids = new Set();
     model.publications.forEach(function (publication) {
       if (publication.year < filters.yearFrom || publication.year > filters.yearTo) return;
       if (!filters.includeLarge && publication.isLarge) return;
+      if (filters.query) {
+        const text = [publication.title, publication.venue, publication.doi, publication.pmid]
+          .concat(publication.keywords)
+          .join(" ")
+          .toLocaleLowerCase();
+        if (text.includes(filters.query)) model.queryMatchLabels.delete(publication.id);
+        else if (!model.queryMatchLabels.has(publication.id)) return;
+      }
       ids.add(publication.id);
     });
     return ids;
@@ -427,6 +451,7 @@
         type: type,
         source: source,
         target: target,
+        isAnchorConnection: source === model.focalId || target === model.focalId,
         publicationIds: ids,
         filteredPublicationCount: ids.length,
         years: yearsFor(ids)
@@ -457,7 +482,7 @@
     const anchor = focalGraphNode(eligible);
     if (anchor && !nodes.some(function (node) { return node.data.id === model.focalId; })) nodes.unshift(anchor);
 
-    return applyQuery(nodes, edges, filters.query);
+    return networkElements(nodes, edges);
   }
 
   function directionElements(filters, eligible) {
@@ -497,7 +522,7 @@
       nodes.unshift(anchor);
     }
 
-    return applyQuery(nodes, edges, filters.query);
+    return networkElements(nodes, edges);
   }
 
   function keywordElements(filters, eligible) {
@@ -537,7 +562,7 @@
       nodes.unshift(anchor);
     }
 
-    return applyQuery(nodes, edges, filters.query);
+    return networkElements(nodes, edges);
   }
 
   function combinedElements(filters, eligible) {
@@ -575,70 +600,29 @@
     });
     const anchor = focalGraphNode(eligible);
     if (anchor && !nodes.some(function (node) { return node.data.id === model.focalId; })) nodes.unshift(anchor);
-    return applyQuery(nodes, edges, filters.query);
+    return networkElements(nodes, edges);
   }
 
-  function nodeMatchesQuery(node, query) {
-    const directText = [node.data.label, node.data.description]
-      .concat(node.data.keywords || [])
-      .join(" ")
-      .toLocaleLowerCase();
-    if (directText.includes(query)) return true;
-    if (node.data.isFocal) return false;
-
-    return (node.data.publicationIds || []).some(function (id) {
-      const publication = model.publications.get(id);
-      if (!publication) return false;
-      return [publication.title, publication.venue, publication.doi, publication.pmid]
-        .concat(publication.keywords || [])
-        .join(" ")
-        .toLocaleLowerCase()
-        .includes(query);
+  function networkElements(nodes, edges) {
+    const clusters = typeof window.FritscheNetworkClusters === "function" ?
+      window.FritscheNetworkClusters(nodes, edges) : [];
+    const groupByNode = new Map();
+    clusters.forEach(function (cluster, index) {
+      cluster.nodeIds.forEach(function (id) {
+        groupByNode.set(id, { id: cluster.id, label: "Group " + (index + 1) });
+      });
     });
-  }
-
-  function applyQuery(nodes, edges, query) {
-    const matchingNodes = query ? nodes.filter(function (node) {
-      return nodeMatchesQuery(node, query);
-    }) : nodes;
-    let publicationNodes = matchingNodes;
-    if (!query && matchingNodes.some(function (node) { return !node.data.isFocal; })) {
-      publicationNodes = matchingNodes.filter(function (node) { return !node.data.isFocal; });
-    }
+    nodes.forEach(function (node) {
+      const group = groupByNode.get(node.data.id);
+      node.data.clusterId = group ? group.id : "";
+      node.data.clusterLabel = group ? group.label : "";
+    });
+    const contentNodes = nodes.filter(function (node) { return !node.data.isFocal; });
+    const publicationNodes = contentNodes.length ? contentNodes : nodes;
     const supportingPublicationIds = uniqueStrings(publicationNodes.reduce(function (ids, node) {
       return ids.concat(node.data.publicationIds || []);
     }, []));
-
-    if (!query) {
-      return { nodes: nodes, edges: edges, publicationIds: supportingPublicationIds };
-    }
-
-    const matches = new Set(matchingNodes.map(function (node) { return node.data.id; }));
-    const anchor = nodes.find(function (node) { return node.data.isFocal; });
-
-    if (!matches.size) {
-      return {
-        nodes: anchor ? [anchor] : [],
-        edges: [],
-        publicationIds: []
-      };
-    }
-    const visible = new Set(matches);
-    if (anchor) visible.add(anchor.data.id);
-    edges.forEach(function (edge) {
-      if (matches.has(edge.data.source) || matches.has(edge.data.target)) {
-        visible.add(edge.data.source);
-        visible.add(edge.data.target);
-      }
-    });
-    return {
-      nodes: nodes.filter(function (node) { return visible.has(node.data.id); }),
-      edges: edges.filter(function (edge) {
-        return visible.has(edge.data.source) && visible.has(edge.data.target) &&
-          (matches.has(edge.data.source) || matches.has(edge.data.target));
-      }),
-      publicationIds: supportingPublicationIds
-    };
+    return { nodes: nodes, edges: edges, publicationIds: supportingPublicationIds, clusters: clusters };
   }
 
   function graphStyles(maxNodeCount, maxEdgeCount) {
@@ -766,6 +750,10 @@
       {
         selector: 'edge[type = "author-direction"]',
         style: { "line-color": colors.teal, "line-opacity": 0.46, "curve-style": "bezier" }
+      },
+      {
+        selector: 'edge[?isAnchorConnection]',
+        style: { "line-opacity": 0.12 }
       },
       {
         selector: ":selected",
@@ -904,6 +892,10 @@
         const keywordLine = makeElement("span", "collaboration-publication-keywords", "Keywords: " + publication.keywords.join(", "));
         item.appendChild(keywordLine);
       }
+      const matchingLabels = model.queryMatchLabels.get(publication.id);
+      if (matchingLabels) {
+        item.appendChild(makeElement("span", "collaboration-publication-meta", "Matches: " + matchingLabels.join("; ")));
+      }
       if (publication.impliedFocalAuthor) {
         item.appendChild(makeElement(
           "span",
@@ -931,6 +923,12 @@
     years.appendChild(makeElement("dd", "", data.years || yearsFor(data.publicationIds)));
     summary.appendChild(count);
     summary.appendChild(years);
+    if (data.clusterLabel) {
+      const group = makeElement("div");
+      group.appendChild(makeElement("dt", "", "Connection group"));
+      group.appendChild(makeElement("dd", "", data.clusterLabel));
+      summary.appendChild(group);
+    }
     body.appendChild(summary);
     if (data.keywords && data.keywords.length) {
       body.appendChild(makeElement("h4", "", "Keywords"));
@@ -1022,11 +1020,14 @@
       return element.group === "nodes" && !element.data.isFocal;
     });
     if (!hasTopicsOrCollaborators) {
-      ui.detailTitle.textContent = "No matches in this view";
+      const hasMatchingPapers = model.currentPublicationIds.size > 0;
+      ui.detailTitle.textContent = hasMatchingPapers ? "No connections in this view" : "No matches in this view";
       ui.detailBody.replaceChildren(makeElement(
         "p",
         "",
-        "Try another search term, widen the year range, lower the minimum number of papers, or include papers with large author lists. The lab marker remains available for context."
+        hasMatchingPapers ?
+          "Select the lab marker or its table entry to see the matching papers. Lower the minimum number of papers to show more connections." :
+          "Try another search term, widen the year range, lower the minimum number of papers, or include papers with large author lists. The lab marker remains available for context."
       ));
       ui.detail.scrollTop = 0;
       return;
@@ -1117,6 +1118,7 @@
       const typeCell = makeElement("td", "", elementTypeLabel(node.data));
       const countCell = makeElement("td", "", String(node.data.filteredPublicationCount));
       const yearsCell = makeElement("td", "", node.data.years);
+      const groupCell = makeElement("td", "", node.data.clusterLabel || "Across groups");
       const actionCell = makeElement("td");
       const button = makeElement("button", "collaboration-directory__button", "View details");
       button.type = "button";
@@ -1127,6 +1129,7 @@
       row.appendChild(typeCell);
       row.appendChild(countCell);
       row.appendChild(yearsCell);
+      row.appendChild(groupCell);
       row.appendChild(actionCell);
       return row;
     });
@@ -1166,36 +1169,87 @@
 
   function layoutGraph(view) {
     const sequence = ++layoutSequence;
-    const nodeCount = cy.nodes().length;
-    const animate = !reducedMotion.matches && nodeCount <= 180;
     const thematicView = view === "directions" || view === "keywords";
-    const useCose = nodeCount <= (thematicView ? 120 : 220);
-    const options = useCose ? {
-      name: "cose",
-      animate: animate,
-      animationDuration: 500,
-      fit: true,
-      padding: 42,
-      randomize: true,
-      componentSpacing: 55,
-      idealEdgeLength: thematicView ? 120 : 75,
-      nodeDimensionsIncludeLabels: true,
-      nodeOverlap: 20,
-      nodeRepulsion: function () { return thematicView ? 160000 : 65000; }
-    } : {
-      name: "concentric",
+    const contentNodes = cy.nodes().filter(function (node) { return !node.data("isFocal"); });
+    const clusters = model.currentClusters.length ? model.currentClusters :
+      [{ nodeIds: contentNodes.map(function (node) { return node.id(); }) }];
+    const boxes = [];
+
+    clusters.forEach(function (cluster) {
+      const ids = new Set(cluster.nodeIds);
+      const nodes = contentNodes.filter(function (node) { return ids.has(node.id()); });
+      if (!nodes.length) return;
+      const edges = cy.edges().filter(function (edge) {
+        return ids.has(edge.data("source")) && ids.has(edge.data("target"));
+      });
+      let options;
+      if (!edges.length) {
+        options = { name: "grid", avoidOverlap: true, spacingFactor: 1.4 };
+      } else if (nodes.length <= 100) {
+        options = {
+          name: "cose",
+          randomize: true,
+          componentSpacing: 55,
+          idealEdgeLength: thematicView ? 120 : 75,
+          nodeDimensionsIncludeLabels: true,
+          nodeOverlap: 20,
+          numIter: 300,
+          nodeRepulsion: function () { return thematicView ? 160000 : 65000; }
+        };
+      } else {
+        options = {
+          name: "breadthfirst",
+          directed: false,
+          avoidOverlap: true,
+          spacingFactor: 1.4,
+          roots: nodes.sort(function (left, right) { return right.degree() - left.degree(); }).first()
+        };
+      }
+      nodes.union(edges).layout(Object.assign(options, { fit: false, animate: false })).run();
+      boxes.push({ nodes: nodes, bounds: nodes.boundingBox({ includeLabels: true }) });
+    });
+
+    const gap = 100;
+    const area = boxes.reduce(function (total, box) {
+      return total + (box.bounds.w + gap) * (box.bounds.h + gap);
+    }, 0);
+    const targetWidth = Math.max(
+      Math.sqrt(area * ui.graph.clientWidth / Math.max(1, ui.graph.clientHeight)),
+      ...boxes.map(function (box) { return box.bounds.w; }),
+      1
+    );
+    const positions = new Map();
+    let left = 0;
+    let top = 0;
+    let rowHeight = 0;
+    let occupiedWidth = 0;
+    boxes.forEach(function (box) {
+      if (left && left + box.bounds.w > targetWidth) {
+        left = 0;
+        top += rowHeight + gap;
+        rowHeight = 0;
+      }
+      box.nodes.forEach(function (node) {
+        positions.set(node.id(), {
+          x: left + node.position("x") - box.bounds.x1,
+          y: top + node.position("y") - box.bounds.y1
+        });
+      });
+      occupiedWidth = Math.max(occupiedWidth, left + box.bounds.w);
+      left += box.bounds.w + gap;
+      rowHeight = Math.max(rowHeight, box.bounds.h);
+    });
+    cy.nodes().filter(function (node) { return node.data("isFocal"); }).forEach(function (node) {
+      positions.set(node.id(), { x: occupiedWidth / 2, y: boxes.length ? -120 : 0 });
+    });
+
+    const layout = cy.layout({
+      name: "preset",
+      positions: function (node) { return positions.get(node.id()); },
       animate: false,
       fit: true,
-      padding: 42,
-      minNodeSpacing: 18,
-      concentric: function (node) {
-        if (node.data("isFocal")) return 100000;
-        if (node.data("type") === "direction") return 50000 + node.data("filteredPublicationCount");
-        return node.data("filteredPublicationCount");
-      },
-      levelWidth: function () { return 4; }
-    };
-    const layout = cy.layout(options);
+      padding: 42
+    });
     activeLayout = layout;
     layout.one("layoutstop", function () {
       if (sequence !== layoutSequence) return;
@@ -1225,6 +1279,7 @@
     model.currentView = filters.view;
     model.currentElements = result.nodes.concat(result.edges);
     model.currentPublicationIds = new Set(result.publicationIds || []);
+    model.currentClusters = result.clusters;
 
     ui.empty.hidden = !cy || result.nodes.length > 0;
     ui.graph.classList.toggle("is-empty", result.nodes.length === 0);
@@ -1233,7 +1288,8 @@
       layoutSequence += 1;
       if (activeLayout) activeLayout.stop();
       activeLayout = null;
-      cy.stop();
+      cy.stop(true, false);
+      cy.elements().stop(true, false);
       ui.loading.hidden = false;
       cy.elements().remove();
       if (result.nodes.length) {
@@ -1273,6 +1329,10 @@
       const labels = viewLabels[filters.view];
       nodeSummary = contentNodeCount.toLocaleString() + " " +
         (contentNodeCount === 1 ? labels[0] : labels[1]);
+    }
+    if (model.currentClusters.length) {
+      nodeSummary += " in " + model.currentClusters.length +
+        (model.currentClusters.length === 1 ? " group" : " groups");
     }
     if (includesAnchor) nodeSummary += " plus Fritsche Lab / Lars Fritsche";
     ui.status.textContent = "Showing " + nodeSummary +

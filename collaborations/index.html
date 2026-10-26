@@ -29,7 +29,7 @@
 <link rel="icon" href="/assets/images/fritsche-lab-favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/atom+xml" title="Fritsche Lab updates" href="/feed.xml">
 <script src="/assets/js/theme.js"></script>
-<link rel="stylesheet" href="/assets/css/site.css?v=1793023386">
+<link rel="stylesheet" href="/assets/css/site.css?v=1793034839">
 
 <script type="application/ld+json">{  "@context": "https://schema.org",    "@type": "WebPage",  "name": "Research & Collaboration Network",  "description": "Explore collaborators, keywords, and research directions in an interactive map of the Fritsche Lab publication record.",  "url": "https://fritschelab.org/collaborations/",  "isPartOf": {"@type": "WebSite", "name": "Fritsche Lab", "url": "https://fritschelab.org"}  }</script>
 
@@ -117,7 +117,7 @@
         <p class="eyebrow">Interactive explorer</p>
         <h2 id="network-explorer-title">Start with a research direction</h2>
       </div>
-      <p id="network-instructions" class="collaboration-help">Select a marker or line to see the related papers and keywords. Drag to pan, scroll or pinch to zoom, or use the tables below to browse with a keyboard.</p>
+      <p id="network-instructions" class="collaboration-help">Select a marker or line to see the related papers and keywords. Markers are grouped by shared publications; the tables list each marker's group. Drag to pan, scroll or pinch to zoom, or use the tables below to browse with a keyboard.</p>
     </div>
 
     <div class="collaboration-controls" role="group" data-network-controls="" aria-label="Collaboration network filters">
@@ -208,7 +208,7 @@
     <div class="collaboration-table-wrap">
       <table>
         <caption class="visually-hidden">Collaborators and topics in the filtered publication network</caption>
-        <thead><tr><th scope="col">Collaborator or topic</th><th scope="col">Type</th><th scope="col">Papers</th><th scope="col">Years</th><th scope="col"><span class="visually-hidden">Action</span></th></tr></thead>
+        <thead><tr><th scope="col">Collaborator or topic</th><th scope="col">Type</th><th scope="col">Papers</th><th scope="col">Years</th><th scope="col">Group</th><th scope="col"><span class="visually-hidden">Action</span></th></tr></thead>
         <tbody data-network-directory=""></tbody>
       </table>
     </div>
@@ -242,6 +242,10 @@
         <p>Keywords come from publication tags and a curated list of terms matched against titles and tags. Papers are also grouped into broader research directions and can appear in more than one. These groupings help with browsing; they are not definitive classifications. Select a keyword or research direction to see its papers.</p>
       </div>
       <div>
+        <h3>Connection groups</h3>
+        <p>Markers that share papers are arranged in groups within the current view. Grouping uses publication overlap and changes with the filters. The lab marker is excluded when forming groups because it connects across the publication record. Group membership helps with browsing; papers and collaborators can still connect across groups.</p>
+      </div>
+      <div>
         <h3>Data and software</h3>
         <p>The interactive map uses Cytoscape.js under the <a href="/assets/vendor/cytoscape/LICENSE">MIT license</a>.</p>
       </div>
@@ -251,7 +255,9 @@
 
 <script src="/assets/vendor/cytoscape/cytoscape.min.js" defer=""></script>
 
-<script src="/assets/js/collaboration-network.js?v=1793023386" defer=""></script>
+<script src="/assets/js/network-clusters.js?v=1793034839" defer=""></script>
+
+<script src="/assets/js/collaboration-network.js?v=1793034839" defer=""></script>
 
 
   </div>
@@ -286,6 +292,6 @@
   </div>
 </footer>
 
-    <script src="/assets/js/site.js?v=1793023386" defer></script>
+    <script src="/assets/js/site.js?v=1793034839" defer></script>
   </body>
 </html>
