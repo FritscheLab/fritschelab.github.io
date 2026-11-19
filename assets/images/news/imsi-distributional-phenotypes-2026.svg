@@ -1,0 +1,30 @@
+<svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="news-imsi-title news-imsi-desc">
+  <title id="news-imsi-title">From glucose readings to distributional GWAS</title>
+  <desc id="news-imsi-desc">A schematic glucose time trace becomes a rising quantile curve for one participant. The curve branches into separate tests of genetic association with the mean and shape of the glucose distribution.</desc>
+  <style>
+    :root:target {
+      --canvas: #142536;
+      --ink: #e8f1fa;
+      --line: #8ba3b8;
+      --teal: #6dcac3;
+      --teal-soft: #193a40;
+      --blue: #85b8e6;
+      --blue-soft: #1b3248;
+    }
+    text { font-family: Inter, Arial, sans-serif; font-size: 29px; font-weight: 600; text-anchor: middle; fill: var(--ink, #00274c); }
+    .line { fill: none; stroke: var(--line, #728895); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .curve { fill: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="480" height="280" fill="var(--canvas, #f7f8f6)"/>
+  <path class="line" d="M27 79v81h103m36-81v81h103"/>
+  
+  <path class="curve" d="M33 137C41 135 41 111 50 111s9 28 17 27 9-18 17-17 8 13 15 8 9-33 17-33 9 24 14 22" stroke="var(--teal, #006f78)"/>
+  <path class="curve" d="M173 150C183 126 202 124 218 119s36-8 48-32" stroke="var(--blue, #346aa0)"/>
+  <path class="line" d="M138 127h20m-6-5 6 5-6 5M278 127h13m0 0q11 0 11-11V98q0-10 11-10h12m-6-5 6 5-6 5m-28 34q11 0 11 11v18q0 10 11 10h12m-6-5 6 5-6 5"/>
+  <rect x="329" y="65" width="123" height="46" rx="8" fill="var(--teal-soft, #eaf2f2)" stroke="var(--teal, #006f78)"/>
+  <rect x="329" y="143" width="123" height="46" rx="8" fill="var(--blue-soft, #eaf2f8)" stroke="var(--blue, #346aa0)"/>
+  <text x="79" y="212">Glucose<tspan x="79" dy="29">readings</tspan></text>
+  <text x="218" y="212">Quantile<tspan x="218" dy="29">curve</tspan></text>
+  <text x="390" y="98">Mean</text>
+  <text x="390" y="176">Shape</text>
+</svg>

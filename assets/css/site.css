@@ -1270,6 +1270,10 @@ figure {
 }
 
 @media (max-width: 40rem) {
+  .feature-panel__visual--study picture {
+    max-width: 25rem;
+  }
+
   .validation-figure__cohorts {
     grid-template-columns: 1fr;
   }
@@ -2556,9 +2560,9 @@ figure {
 
 .collaborate-card__header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(4rem, 8vw, 7rem);
+  grid-template-columns: minmax(0, 1fr) clamp(3.25rem, 8vw, 7rem);
   align-items: center;
-  gap: 1rem;
+  gap: clamp(0.75rem, 2vw, 1rem);
   margin-bottom: 0.85rem;
 }
 

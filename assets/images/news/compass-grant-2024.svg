@@ -1,23 +1,58 @@
 <svg id="dark" xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img" aria-labelledby="compass-grant-news-title compass-grant-news-desc">
-  <title id="compass-grant-news-title">A shared question about treatment response</title>
-  <desc id="compass-grant-news-desc">Two groups of collaborators connect to a shared question mark. The COMPASS collaboration studies why mental health treatment responses differ. The people are conceptual symbols, not a count of investigators or participants, and no treatment benefit is shown.</desc>
+  <title id="compass-grant-news-title">Predicting treatment response in COMPASS</title>
+  <desc id="compass-grant-news-desc">The 2024 study plan begins with random assignment to app-based cognitive behavioral therapy or mindfulness training while participants wait for clinic-based care. Their clinical teams select subsequent care. COMPASS follows treatment response across both stages. Open markers represent follow-up.</desc>
   <style>
-    :root:target { --canvas: #142536; --ink: #e8f1fa; --purple: #bca7e8; --soft: #302c46; --line: #8ba3b8; }
-    text { font-family: Inter, Arial, sans-serif; fill: var(--ink, #00274c); }
+    :root:target {
+      --canvas: #142536;
+      --ink: #e8f1fa;
+      --muted: #a7b8c8;
+      --border: #344b60;
+      --line: #8ba3b8;
+      --teal: #6dcac3;
+      --teal-soft: #19343a;
+      --teal-border: #365c63;
+    }
+    text {
+      font-family: Inter, Arial, sans-serif;
+      fill: var(--ink, #00274c);
+    }
   </style>
-  <defs>
-    <g id="compass-grant-collaborators" stroke="var(--ink, #00274c)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="17" cy="-21" r="15" fill="var(--canvas, #f7f8f6)"/>
-      <path d="M-7 44V20C-7-8 41-8 41 20V44Z" fill="var(--canvas, #f7f8f6)"/>
-      <circle cx="-15" cy="-7" r="18" fill="var(--soft, #f0ecf6)"/>
-      <path d="M-44 57V35C-44 3 14 3 14 35V57Z" fill="var(--soft, #f0ecf6)"/>
-    </g>
-  </defs>
+
   <rect width="480" height="280" fill="var(--canvas, #f7f8f6)"/>
-  <path d="M135 127H182M298 127H345" fill="none" stroke="var(--line, #728895)" stroke-width="3"/>
-  <use href="#compass-grant-collaborators" transform="translate(92 121)"/>
-  <use href="#compass-grant-collaborators" transform="translate(389 121)"/>
-  <circle cx="240" cy="127" r="58" fill="var(--soft, #f0ecf6)" stroke="var(--purple, #6c5b9d)" stroke-width="3"/>
-  <text x="240" y="153" text-anchor="middle" font-size="76" font-weight="600">?</text>
-  <text x="240" y="242" text-anchor="middle" font-size="32" font-weight="600">Treatment response</text>
+  <text x="28" y="51" font-size="30" font-weight="650" letter-spacing="-.55">Predicting treatment response</text>
+
+  <g fill="none" stroke="var(--border, #ccd5d5)" stroke-width="1.5">
+    <rect x="28" y="76" width="204" height="116" rx="8"/>
+    <rect x="248" y="76" width="204" height="116" rx="8"/>
+  </g>
+
+  <g id="app-stage">
+    <text x="44" y="107" font-size="22" font-weight="650" letter-spacing="-.45">App interventions</text>
+    <text x="44" y="131" font-size="21" style="fill:var(--muted, #52606d)">Before clinic care</text>
+    <path d="M44 162h7m9-13h-4q-5 0-5 5v17q0 5 5 5h4" fill="none" stroke="var(--line, #728895)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+    <g font-size="21" font-weight="600">
+      <text x="68" y="156">CBT</text>
+      <text x="68" y="183">Mindfulness</text>
+    </g>
+  </g>
+
+  <g id="clinic-stage">
+    <text x="264" y="107" font-size="22" font-weight="650" letter-spacing="-.45">Clinic-based care</text>
+    <g font-size="21" style="fill:var(--muted, #52606d)">
+      <text x="264" y="151">Chosen by the</text>
+      <text x="264" y="177">clinical team</text>
+    </g>
+  </g>
+
+  <g id="response-follow-up">
+    <rect x="28" y="202" width="424" height="50" rx="8" fill="var(--teal-soft, #eaf2f2)" stroke="var(--teal-border, #bdd4d5)" stroke-width="1.5"/>
+    <text x="44" y="224" font-size="21" font-weight="650">Track response over time</text>
+    <path d="M44 239h392m-7-7 7 7-7 7" fill="none" stroke="var(--teal, #006f78)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="var(--canvas, #f7f8f6)" stroke="var(--teal, #006f78)" stroke-width="2.25">
+      <circle cx="73" cy="239" r="4.75"/>
+      <circle cx="169" cy="239" r="4.75"/>
+      <circle cx="286" cy="239" r="4.75"/>
+      <circle cx="382" cy="239" r="4.75"/>
+    </g>
+  </g>
 </svg>

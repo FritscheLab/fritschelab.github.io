@@ -152,6 +152,8 @@
       ], authorCount > 50)),
       isConsortium: Boolean(firstDefined(raw, ["isConsortium", "consortium"], false)),
       impliedFocalAuthor: Boolean(firstDefined(raw, ["impliedFocalAuthor"], false)),
+      consortiumCredit: String(raw.consortiumCredit || ""),
+      consortiumCreditAuthorIds: asArray(raw.consortiumCreditAuthorIds),
       directionIds: directionIds,
       keywords: keywords
     };
@@ -436,7 +438,7 @@
     if (!source) return null;
     const node = graphNode(source, filteredIds(source.data.publicationIds, eligible));
     node.data.label = "Fritsche Lab / Lars Fritsche";
-    node.data.description = "This marker represents Lars Fritsche on papers that list him as an author. For consortium papers that do not name Lars individually, it shows the paper’s link to the lab; those papers are labeled.";
+    node.data.description = "This marker connects Lars Fritsche to papers through their bylines or consortium credits. The paper details label consortium links.";
     node.data.isFocal = true;
     node.data.isLabAnchor = true;
     node.data.logoUrl = app.dataset.logoUrl || "";
@@ -896,7 +898,13 @@
       if (matchingLabels) {
         item.appendChild(makeElement("span", "collaboration-publication-meta", "Matches: " + matchingLabels.join("; ")));
       }
-      if (publication.impliedFocalAuthor) {
+      if (publication.consortiumCredit) {
+        item.appendChild(makeElement(
+          "span",
+          "collaboration-publication-inference",
+          "Consortium credit: " + publication.consortiumCredit
+        ));
+      } else if (publication.impliedFocalAuthor) {
         item.appendChild(makeElement(
           "span",
           "collaboration-publication-inference",
@@ -972,16 +980,24 @@
       "author-direction": "This collaborator’s papers in this research direction"
     };
     const count = data.publicationIds ? data.publicationIds.length : data.filteredPublicationCount;
-    const inferredCount = (data.publicationIds || []).filter(function (id) {
-      const publication = model.publications.get(id);
-      return publication && publication.impliedFocalAuthor;
+    const includesFocal = data.source === model.focalId || data.target === model.focalId;
+    const sharedPublications = (data.publicationIds || []).map(function (id) {
+      return model.publications.get(id);
+    }).filter(Boolean);
+    const inferredCount = includesFocal ? sharedPublications.filter(function (publication) {
+      return publication.impliedFocalAuthor;
+    }).length : 0;
+    const consortiumLinkedCount = sharedPublications.filter(function (publication) {
+      return (includesFocal && publication.impliedFocalAuthor) ||
+        publication.consortiumCreditAuthorIds.includes(data.source) ||
+        publication.consortiumCreditAuthorIds.includes(data.target);
     }).length;
     let connectionLabel = connectionLabels[data.type] || "Shared papers";
-    if (data.type === "author-direction" && (data.source === model.focalId || data.target === model.focalId)) {
+    if (data.type === "author-direction" && includesFocal) {
       connectionLabel = "Papers in this research direction";
     }
-    if (data.type === "coauthor" && inferredCount && (data.source === model.focalId || data.target === model.focalId)) {
-      connectionLabel = inferredCount === count ?
+    if (data.type === "coauthor" && consortiumLinkedCount) {
+      connectionLabel = consortiumLinkedCount === count ?
         (count === 1 ? "Consortium-linked paper" : "Consortium-linked papers") :
         "Co-authored and consortium-linked papers";
     }
@@ -993,7 +1009,7 @@
         "One paper connects these items under the current filters." :
         count + " papers connect these items under the current filters."
     ));
-    if (inferredCount && data.type === "coauthor" && (data.source === model.focalId || data.target === model.focalId)) {
+    if (inferredCount && data.type === "coauthor") {
       let inferenceText;
       if (count === 1) {
         inferenceText = "This consortium paper links to the lab but does not name Lars Fritsche in its author list.";

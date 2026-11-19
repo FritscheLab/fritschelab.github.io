@@ -4,10 +4,16 @@
   <link href="https://fritschelab.org/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://fritschelab.org/"/>
   <id>https://fritschelab.org/</id>
-  <updated>2026-08-03T00:00:00-04:00</updated>
+  <updated>2026-10-19T00:00:00-04:00</updated>
   <author><name>Fritsche Lab</name></author>
   
   <entry>
+    <title>Genome-wide association testing with trait distributions</title>
+    <link href="https://fritschelab.org/news/imsi-distributional-phenotypes-2026/"/>
+    <id>https://fritschelab.org/news/imsi-distributional-phenotypes-2026/</id>
+    <updated>2026-10-19T00:00:00-04:00</updated>
+    <summary type="html">A workshop poster uses repeated glucose readings to illustrate genome-wide association testing with the full distribution of a trait.</summary>
+  </entry><entry>
     <title>PsyPRSweb at JSM 2026</title>
     <link href="https://fritschelab.org/news/psyprsweb-jsm-2026/"/>
     <id>https://fritschelab.org/news/psyprsweb-jsm-2026/</id>
@@ -24,7 +30,7 @@
     <link href="https://fritschelab.org/news/compass-mental-health-care-2026/"/>
     <id>https://fritschelab.org/news/compass-mental-health-care-2026/</id>
     <updated>2026-06-08T00:00:00-04:00</updated>
-    <summary type="html">COMPASS participants contribute repeated reports, genetic samples, and health record data to study why mental health treatment responses differ.</summary>
+    <summary type="html">COMPASS studies why mental health treatment responses differ using repeated participant reports, genetic samples, health records, and data from phones and wearables.</summary>
   </entry><entry>
     <title>Comparing cancer immunotherapy outcomes in Black and white patients</title>
     <link href="https://fritschelab.org/news/cancer-immunotherapy-outcomes-2024/"/>
